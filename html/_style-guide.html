@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HTML Boilerplate with BEM styles, via SASS and RequireJS">
+  <meta name="keywords" content="html, css, js, bootstrap, sass, requirejs, bem">
+  <meta name="author" content="Hiep Ta | henry9.com | contact@henry9.com">
+
+	<title>Style Guide | Site Name</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/img/favicon.ico">
+
+	<!-- Styles -->
+	<!-- <link rel="stylesheet" href="assets/css/vendor.css"> -->
+	<link rel="stylesheet" href="assets/css/main.css">
+
+	<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+  
+</head>
+
+<body>
+	<div id="SiteContainer" class="site-container page-home">
+		<header id="SiteHeader" class="l-header l-header--guide">
+			<div class="container">
+				<div class="row align-items-center justify-content-between text-center text-md-left my-3">
+					<div class="l-header__logo col-12 col-md-auto"><img src="samples/logo-style-guide.png" alt=""></div>
+					<div class="l-header__title col my-3">Web style guide</div>
+					<div class="l-header__credit col-md-auto my-3">by <b>Hiep Ta</b> &#160;&#8212;&#160; <i>contact@henry9.com</i></div>
+				</div>
+			</div>
+		</header>
+		<div id="SiteContent" class="l-content l-content--guide" data-js-module="components">
+			<div class="container">
+				<div class="c-card h-shadow-1 my-3 p-3">
+					<div class="row">
+						<div class="col-xs-12 col-md-auto">
+							<nav class="c-guide--side-nav">
+								<ol>
+									<li><a href="#">Style</a>
+										<ul>
+											<li><a href="#">Color</a></li>
+											<li><a href="#">Shadow</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Layout</a>
+										<ul>
+											<li><a href="#">Grid</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Content</a>
+										<ul>
+											<li><a href="#">Typography</a></li>
+											<li><a href="#">Iconography</a></li>
+											<li><a href="#">Images</a></li>
+											<li><a href="#">Tables</a></li>
+										</ul>
+									</li>    
+									<li><a href="#">Components</a>
+										<ul>
+											<li><a href="#">Alert</a></li>
+											<li><a href="#">Badge</a></li>
+											<li><a href="#">Breadcrumb</a></li>
+											<li><a href="#">Buttons</a></li>
+											<li><a href="#">Collapse</a></li>
+											<li><a href="#">Dropdowns</a></li>
+											<li><a href="#">Forms & Input group</a></li>
+											<li><a href="#">Modal</a></li>
+											<li><a href="#">Navs & Tabs</a></li>
+											<li><a href="#">Navbar</a></li>
+											<li><a href="#">Pagination</a></li>
+											<li><a href="#">Popovers</a></li>
+											<li><a href="#">Tooltips</a></li>
+											<li class="c-guide--side-nav__divider"></li>
+											<li><a href="#">Steps</a></li>
+											<li><a href="#">Media</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Plugins</a>
+										<ul>
+											<li><a href="#">Select</a></li>
+											<li><a href="#">Datepicker</a></li>
+											<li><a href="#">Tags</a></li>
+											<li><a href="#">Touchspin</a></li>
+											<li><a href="#">Restable</a></li>
+											<li><a href="#">Swiper</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="col-xs-12 col-md">
+							<div class="l-guide">
+								<div class="l-guide__header">
+									<h1 class="l-guide__title">Style</h1>
+								</div>
+								<div class="l-guide__content">
+									<div class="c-guide">
+										<div class="c-guide__header">
+											<h2 class="c-guide__title">Color Usage and Palette</h2>
+										</div>
+										<div class="c-guide__content">
+											<div class="mb-3">
+												<h3 class="c-guide__title--sub">Theme Colors</h3>
+												<div class="row">
+													<div class="col-xs-6 col-md-3">
+														<div class="c-guide__color">
+															<div class="color-preview color-preview--primary"></div>
+															<div class="color-content">
+																<div class="color-var">primary</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xs-6 col-md-3">
+														<div class="c-guide__color">
+															<div class="color-preview color-preview--primary-darker"></div>
+															<div class="color-content">
+																<div class="color-var">primary-darker</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xs-6 col-md-3">
+														<div class="c-guide__color">
+															<div class="color-preview color-preview--secondary"></div>
+															<div class="color-content">
+																<div class="color-var">secondary</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xs-6 col-md-3">
+														<div class="c-guide__color">
+															<div class="color-preview color-preview--secondary-darker"></div>
+															<div class="color-content">
+																<div class="color-var">secondary-darker</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="mb-3">
+												<h3 class="c-guide__title--sub">Grayscales</h3>
+												<div class="row no-gutters">
+													<div class="col-6 col-sm-3 col-md">
+														<div class="c-guide__color">
+															<div class="color-preview color-preview--grey50"></div>
+															<div class="color-content">
+																<div class="color-var">grey50</div>
+																<div class="color-role"></div>
+															</div>
+														</div>
+													</div>
+													<div class="col-6 col-sm-3 col-md">
+														<div class="c-guide__color">
+															<div class="color-preview color-preview--grey100"></div>
+															<div class="color-content">
+																<div class="color-var">grey100</div>
+																<div class="color-role">Background</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-6 col-sm-3 col-md">
+														<div class="c-guide__color">
+															<div class="color-preview color-preview--grey200"></div>
+															<div class="color-content">
+																<div class="color-var">grey200</div>
+																<div class="color-role">Background Darker</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-6 col-sm-3 col-md">
+														<div class="c-guide__color">
+															<div class="color-preview color-preview--grey300"></div>
+															<div class="color-content">
+																<div class="color-var">grey300</div>
+																<div class="color-role"></div>
+															</div>
+														</div>
+													</div>
+													<div class="col-6 col-sm-3 col-md">
+														<div class="c-guide__color">
+															<div class="color-preview color-preview--grey400"></div>
+															<div class="color-content">
+																<div class="color-var">grey400</div>
+																<div class="color-role">Disabled Text</div>
+															</div>
+														</div>
+													</div>
+													<div class="w-100 d-none d-md-block"></div>
+													<div class="col-6 col-sm-3 col-md">
+														<div class="c-guide__color">
+															<div class="color-preview color-preview--grey500"></div>
+															<div class="color-content">
+																<div class="color-var">grey500</div>
+																<div class="color-role"></div>
+															</div>
+														</div>
+													</div>
+													<div class="col-6 col-sm-3 col-md">
+														<div class="c-guide__color">
+															<div class="color-preview color-preview--grey600"></div>
+															<div class="color-content">
+																<div class="color-var">grey600</div>
+																<div class="color-role">Subtitle <br>Label</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-6 col-sm-3 col-md">
+														<div class="c-guide__color">
+															<div class="color-preview color-preview--grey700"></div>
+															<div class="color-content">
+																<div class="color-var">grey700</div>
+																<div class="color-role"></div>
+															</div>
+														</div>
+													</div>
+													<div class="col-6 col-sm-3 col-md">
+														<div class="c-guide__color">
+															<div class="color-preview color-preview--grey800"></div>
+															<div class="color-content">
+																<div class="color-var">grey800</div>
+																<div class="color-role">Body Text</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-6 col-sm-3 col-md">
+														<div class="c-guide__color">
+															<div class="color-preview color-preview--grey900"></div>
+															<div class="color-content">
+																<div class="color-var">grey900</div>
+																<div class="color-role">Background Dark <br>Heading & Title</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="mb-3">
+												<h3 class="c-guide__title--sub">Alerts <small class="text-lowercase">(by bootstrap)</small></h3>
+												<div class="row">
+													<div class="col-6 col-sm-3 col-md">
+														<div class="c-guide__color">
+															<div class="color-preview color-preview--green"></div>
+															<div class="color-content">
+																<div class="color-var">green</div>
+																<div class="color-role">Success</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-6 col-sm-3 col-md">
+														<div class="c-guide__color">
+															<div class="color-preview color-preview--cyan"></div>
+															<div class="color-content">
+																<div class="color-var">cyan</div>
+																<div class="color-role">Info</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-6 col-sm-3 col-md">
+														<div class="c-guide__color">
+															<div class="color-preview color-preview--yellow"></div>
+															<div class="color-content">
+																<div class="color-var">yellow</div>
+																<div class="color-role">Warning</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-6 col-sm-3 col-md">
+														<div class="c-guide__color">
+															<div class="color-preview color-preview--red"></div>
+															<div class="color-content">
+																<div class="color-var">red</div>
+																<div class="color-role">Danger</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- <div class="mb-3">
+												<h3 class="c-guide__title--sub">Gradients</h3>
+											</div> -->
+										</div>
+								  </div>
+								  <div class="c-guide">
+										<div class="c-guide__header">
+											<h2 class="c-guide__title">Shadow</h2>
+										</div>
+										<div class="c-guide__content">
+											<div class="h-bgc p-3">
+												<div class="row">
+													<div class="col-6 col-md-3">
+														<div class="c-guide__shadow h-shadow-1"><span>h-shadow-1</span></div>
+													</div>
+													<div class="col-6 col-md-3">
+														<div class="c-guide__shadow h-shadow-2"><span>h-shadow-2</span></div>
+													</div>
+													<div class="col-6 col-md-3">
+														<div class="c-guide__shadow h-shadow-3"><span>h-shadow-3</span></div>
+													</div>
+													<div class="col-6 col-md-3">
+														<div class="c-guide__shadow h-shadow-4"><span>h-shadow-4</span></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="l-guide">
+								<div class="l-guide__header">
+									<h1 class="l-guide__title">Layout</h1>
+								</div>
+								<div class="l-guide__content">
+									<a href="https://getbootstrap.com/docs/4.1/layout/grid/" target="_blank">Bootstrap Document <i class="mdi mdi-open-in-new"></i></a>
+									<ul class="h-fz--xs mt-3">
+										<li>How it works</li>
+										<li>Grid options</li>
+										<li>Auto-layout columns
+											<ul>
+												<li>Equal-width</li>
+												<li>Setting one column width</li>
+												<li>Variable width content</li>
+												<li>Equal-width multi-row</li>
+											</ul>
+										</li>
+										<li>Responsive classes
+											<ul>
+												<li>All breakpoints</li>
+												<li>Stacked to horizontal</li>
+												<li>Mix and match</li>
+											</ul>
+										</li>
+										<li>Alignment
+											<ul>
+												<li>Vertical alignment</li>
+												<li>Horizontal alignment</li>
+												<li>No gutters</li>
+												<li>Column wrapping</li>
+												<li>Column breaks</li>
+											</ul>
+										</li>
+										<li>Reordering
+											<ul>
+												<li>Order classes</li>
+												<li>Offsetting columns</li>
+											</ul>
+										</li>
+										<li>Nesting</li>
+										<li>Sass mixins
+											<ul>
+												<li>Variables</li>
+												<li>Mixins</li>
+												<li>Example usage</li>
+											</ul>
+										</li>
+										<li>Customizing the grid
+											<ul>
+												<li>Columns and gutters</li>
+												<li>Grid tiers</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="l-guide">
+								<div class="l-guide__header">
+									<h1 class="l-guide__title">Content</h1>
+								</div>
+								<div class="l-guide__content">
+									<div class="c-guide">
+										<div class="c-guide__header">
+											<h2 class="c-guide__title">Typography</h2>
+										</div>
+										<div class="c-guide__content">
+											<div class="mb-5">
+												<h3 class="c-guide__title--sub">Typeface</h3>
+												<h4>Noto Sans</h4>
+												<div class="row">
+													<div class="col-xs-12 col-lg mb-3 mb-xl-0">
+														<div class="c-guide__typeface">
+															<div class="typeface-info text-right"><span>light / 300</span></div>
+															<div class="typeface-data typeface-data--w300 text-center">Aa</div>
+														</div>
+													</div>
+													<div class="col-xs-12 col-lg mb-3 mb-xl-0">
+														<div class="c-guide__typeface">
+															<div class="typeface-info text-right"><span>base / 400</span></div>
+															<div class="typeface-data typeface-data--w400 text-center">Aa</div>
+														</div>
+													</div>
+													<div class="col-xs-12 col-lg mb-3 mb-xl-0">
+														<div class="c-guide__typeface">
+															<div class="typeface-info text-right"><span>medium / 500</span></div>
+															<div class="typeface-data typeface-data--w500 text-center">Aa</div>
+														</div>
+													</div>
+													<div class="col-xs-12 col-lg mb-3 mb-xl-0">
+														<div class="c-guide__typeface">
+															<div class="typeface-info text-right"><span>semibold / 600</span></div>
+															<div class="typeface-data typeface-data--w600 text-center"></div>
+														</div>
+													</div>
+													<div class="col-xs-12 col-lg mb-3 mb-xl-0">
+														<div class="c-guide__typeface">
+															<div class="typeface-info text-right"><span>bold / 700</span></div>
+															<div class="typeface-data typeface-data--w700 text-center">Aa</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="mb-5">
+												<h3 class="c-guide__title--sub">Default</h3>
+												<div class="row">
+													<div class="col-12 col-md-4">
+														<h1>h1 - Headline 1</h1>
+														<h2>h2 - Headline 2</h2>
+														<h3>h3 - Headline 3</h3>
+														<h4>h4 - Headline 4</h4>
+														<h5>h5 - Headline 5</h5>
+														<h6>h6 - Headline 6</h6>
+														<hr>
+													</div>
+													<div class="col-12 col-md-8">
+														<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor.</p>
+														<p>Tôi sẽ nhớ những ngày nắng lang thang khắp ngõ ngách ở thành phố Vienna (Áo) hay buổi chiều tản bộ bên dòng sông Seine (Pháp) thơ mộng. Những lúc ngồi trên chiếc thuyền nho nhỏ, thả mình vào bản nhạc du dương và nhẹ nhàng, len lỏi khắp các kênh đào ngắm nhìn thành phố của tình yêu khiến tôi nhận ra Venice (Italy) thật đẹp và lãng mạn.</p>
+														<p class="h-fz--sm">Smaller text size, Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque aliquet nibh nec urna. Tôi sẽ nhớ những ngày nắng lang thang khắp ngõ ngách ở thành phố Vienna (Áo) hay buổi chiều tản bộ bên dòng sông Seine (Pháp) thơ mộng.</p>
+														<p class="h-fz--lg">Larger text size, Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque aliquet nibh nec urna. Tôi sẽ nhớ những ngày nắng lang thang khắp ngõ ngách ở thành phố Vienna (Áo) hay buổi chiều tản bộ bên dòng sông Seine (Pháp) thơ mộng.</p>
+														<ul>
+														  <li>Lorem ipsum dolor sit amet</li>
+														  <li>Consectetur adipiscing elit</li>
+														  <li>Integer molestie lorem at massa</li>
+														    <ul>
+														      <li>Phasellus iaculis neque</li>
+														      <li>Purus sodales ultricies</li>
+														    </ul>
+														  </li>
+														  <li>Faucibus porta lacus fringilla vel</li>
+														  <li>Aenean sit amet erat nunc</li>
+														</ul>
+														<p>
+															<a href="#">link inline</a>,
+															<mark>highlight</mark>,
+															<del>deleted text</del>,
+															<s>no longer accurate</s>,
+															<ins>addition to the document</ins>,
+															<u>underlined</u>,
+															<small>fine print</small>,
+															<strong>bold text</strong>,
+															<em>italicized text</em>
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class="mb-5">
+												<h3 class="c-guide__title--sub">Hierachy</h3>
+												<table class="table table-borderless c-guide__type-hierachy">
+												  <thead>
+												    <tr class="text-uppercase">
+												      <th>Style</th>
+												      <th>Weight</th>
+												      <th>Size</th>
+												      <th>Line Height</th>
+												    </tr>
+												  </thead>
+												  <tbody>
+												  	<tr>
+												  		<td><div class="h-title">Title</div></td>
+												  		<td><span class="h-fz--xs h-c-text--sub">medium / 500</span></td>
+												  		<td><span class="h-fz--xs h-c-text--sub">1.75rem</span></td>
+												  		<td><span class="h-fz--xs h-c-text--sub">1.25</span></td>
+												  	</tr>
+												  	<tr>
+												  		<td><div class="h-title h-title--sm">Title sm</div></td>
+												  		<td><span class="h-fz--xs h-c-text--sub">medium / 500</span></td>
+												  		<td><span class="h-fz--xs h-c-text--sub">1.25rem</span></td>
+												  		<td><span class="h-fz--xs h-c-text--sub">1.375</span></td>
+												  	</tr>
+												  	<tr>
+												  		<td><div class="h-headline">Headline</div></td>
+												  		<td><span class="h-fz--xs h-c-text--sub">bold / 700</span></td>
+												  		<td><span class="h-fz--xs h-c-text--sub">1.25rem</span></td>
+												  		<td><span class="h-fz--xs h-c-text--sub">1.375</span></td>
+												  	</tr>
+												  	<tr>
+												  		<td><div class="h-headline h-headline--sm">Headline sm</div></td>
+												  		<td><span class="h-fz--xs h-c-text--sub">bold / 700</span></td>
+												  		<td><span class="h-fz--xs h-c-text--sub">1rem</span></td>
+												  		<td><span class="h-fz--xs h-c-text--sub">1.5</span></td>
+												  	</tr>
+												  	<tr>
+												  		<td>Body</td>
+												  		<td><span class="h-fz--xs h-c-text--sub">normal / 400</td>
+												  		<td><span class="h-fz--xs h-c-text--sub">1rem</span></td>
+												  		<td><span class="h-fz--xs h-c-text--sub">1.5</span></td>
+												  	</tr>
+												  	<tr>
+												  		<td><div class="h-caption">Caption</div></td>
+												  		<td><span class="h-fz--xs h-c-text--sub">normal / 400</td>
+												  		<td><span class="h-fz--xs h-c-text--sub">.875rem</span></td>
+												  		<td><span class="h-fz--xs h-c-text--sub">1.5</span></td>
+												  	</tr>
+												  	<tr>
+												  		<td><div class="h-caption h-caption--sm">Caption sm</div></td>
+												  		<td><span class="h-fz--xs h-c-text--sub">normal / 400</td>
+												  		<td><span class="h-fz--xs h-c-text--sub">.75rem</span></td>
+												  		<td><span class="h-fz--xs h-c-text--sub">1.5</span></td>
+												  	</tr>
+												  </tbody>
+												</table>
+											</div>
+											<div class="mb-5">
+												<h3 class="c-guide__title--sub">Helper</h3>
+												<div class="h-fz--xs">
+													<div class="text-monospace">Text alignment: <span>text-{sm,md,lg,xl}-{left,center,right}</span></div>
+													<div class="text-monospace">Text wrapping and overflow: <span>.text-{nowrap, text-truncate}</span></div>
+													<div class="text-monospace">Text transform: <span>.text-{lowercase, uppercase, capitalize}</span></div>
+													<div class="text-monospace">Font weight: <span>.h-fw--{300-800}</span></div>
+													<div class="text-monospace">Font style: <span>.h-w--{normal, italic}</span></div>
+													<div class="text-monospace">Monospace: <span>.text-monospace</span></div>
+													<div class="text-monospace">Text-size: <span>.h-fz--{xxxs-xxxl}</span></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="c-guide">
+										<div class="c-guide__header">
+											<h2 class="c-guide__title">Iconography</h2>
+										</div>
+										<div class="c-guide__content">
+											<div class="h-fz--xxxl mb-2">
+							  				<i class="c-icon mdi mdi-home"></i>
+							  				<i class="c-icon mdi mdi-cards-heart"></i>
+							  				<i class="c-icon mdi mdi-airplane-takeoff"></i>
+							  				<i class="c-icon mdi mdi-alarm"></i>
+							  				<i class="c-icon mdi mdi-alert-circle"></i>
+							  				<i class="c-icon mdi mdi-angle-acute"></i>
+							  				<i class="c-icon mdi mdi-arrange-send-backward"></i>
+							  				<i class="c-icon mdi mdi-arrow-down-bold-circle"></i>
+							  				<i class="c-icon mdi mdi-auto-fix"></i>
+							  				<i class="c-icon mdi mdi-bullseye"></i>
+							  				<span class="mx-3">|</span>
+							  				<i class="c-icon mdi mdi-alpha-h-box"></i>
+							  				<i class="c-icon mdi mdi-alpha-e-box"></i>
+							  				<i class="c-icon mdi mdi-alpha-n-box"></i>
+							  				<i class="c-icon mdi mdi-alpha-r-box"></i>
+							  				<i class="c-icon mdi mdi-alpha-y-box"></i>
+							  				<i class="c-icon mdi mdi-numeric-9-box"></i>
+							  				<span class="mx-3">|</span>
+							  				<span class="mdi mdi-account"></span>
+							  				<span class="mdi mdi-account mdi-rotate-45"></span>
+							  				<span class="mdi mdi-account mdi-rotate-90"></span>
+							  				<i class="c-icon mdi mdi-angle-acute"></i>
+							  				<i class="c-icon mdi mdi-angle-acute mdi-flip-h"></i>
+							  				<i class="c-icon mdi mdi-angle-acute mdi-flip-v"></i>
+							  				<span class="mdi mdi-loading mdi-spin"></span>
+							  				<span class="mdi mdi-crop-free mdi-spin"></span>
+							  			</div>
+							  			<div class="text-monospace h-fz--xs">
+							  				Rotate:
+							  				.mdi-rotate-{45, 90, 135, 180, 225, 270, 315}
+											</div>
+						  				<div class="text-monospace h-fz--xs">
+						  					Flip:
+												.mdi-flip-{h, v}
+						  				</div>
+						  				<div class="text-monospace h-fz--xs">
+						  					Spin:
+												.mdi-spin
+						  				</div>
+						  				<div class="mt-2 h-fz--xs">See more: <a href="https://materialdesignicons.com/" target="_blank">materialdesignicons.com</a></div>
+										</div>
+									</div>
+									<div class="c-guide">
+										<div class="c-guide__header">
+											<h2 class="c-guide__title">Images</h2>
+										</div>
+										<div class="c-guide__content">
+											<h3 class="c-guide__title--sub">Avatar</h3>
+											<div class="row align-items-center text-center mb-3">
+												<div class="col-12 col-md-auto">
+													<div class="c-avatar bg-color-cyan-500 h-c-white"><span>AVT</span></div>
+												</div>
+												<div class="col-12 col-md-auto">
+													<div class="c-avatar c-avatar--rounded bg-color-cyan-500 h-c-white"><span>avt</span></div>
+												</div>
+												<div class="col-12 col-md-auto">
+													<div class="c-avatar"><img src="samples/avatar-01.jpg" alt=""></div>
+												</div>
+												<div class="col-12 col-md-auto">
+													<div class="c-avatar" style="background-image: url('samples/avatar-02.jpg');"></div>
+												</div>
+												<div class="col-12 col-md-auto">
+													<div class="c-avatar c-avatar--rounded"><img src="samples/avatar-01.jpg" alt=""></div>
+												</div>
+												<div class="col-12 col-md-auto">
+													<div class="c-avatar c-avatar--rounded" style="background-image: url('samples/avatar-02.jpg');"></div>
+												</div>
+												<div class="col-12 col-md-auto">
+													<div class="c-avatar c-avatar--thumbnail">
+														<img src="samples/avatar-01.jpg" alt="">
+													</div>
+												</div>
+												<div class="col-12 col-md-auto">
+													<div class="c-avatar c-avatar--thumbnail">
+														<div class="c-avatar__image" style="background-image: url('samples/avatar-02.jpg');"></div>
+													</div>
+												</div>
+												<div class="col-12 col-md-auto">
+													<div class="c-avatar c-avatar--thumbnail c-avatar--rounded">
+														<img src="samples/avatar-01.jpg" alt="">
+													</div>
+												</div>
+												<div class="col-12 col-md-auto">
+													<div class="c-avatar c-avatar--thumbnail c-avatar--rounded">
+														<div class="c-avatar__image" style="background-image: url('samples/avatar-02.jpg');"></div>
+													</div>
+												</div>
+											</div>
+											<div class="row align-items-center text-center mb-3">
+												<div class="col-12 col-md-auto">
+													<div class="c-avatar c-avatar--sm bg-color-cyan-500 h-c-white"><span>sm</span></div>
+												</div>
+												<div class="col-12 col-md-auto">
+													<div class="c-avatar c-avatar bg-color-cyan-500 h-c-white"><span>md</span></div>
+												</div>
+												<div class="col-12 col-md-auto">
+													<div class="c-avatar c-avatar--lg bg-color-cyan-500 h-c-white"><span>lg</span></div>
+												</div>
+												<div class="col-12 col-md-auto">
+													<div class="c-avatar c-avatar--xl bg-color-cyan-500 h-c-white"><span>xl</span></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="c-guide">
+										<div class="c-guide__header">
+											<h2 class="c-guide__title">Tables</h2>
+										</div>
+										<div class="c-guide__content">
+											<table class="table table-bordered c-table">
+											  <thead>
+											    <tr>
+											      <th scope="col">#</th>
+											      <th scope="col">First</th>
+											      <th scope="col">Last</th>
+											      <th scope="col">Handle</th>
+											    </tr>
+											  </thead>
+											  <tbody>
+											    <tr>
+											      <th scope="row">1</th>
+											      <td>Mark</td>
+											      <td>Otto</td>
+											      <td>@mdo</td>
+											    </tr>
+											    <tr>
+											      <th scope="row">2</th>
+											      <td>Jacob</td>
+											      <td>Thornton</td>
+											      <td>@fat</td>
+											    </tr>
+											    <tr>
+											      <th scope="row">3</th>
+											      <td>Larry</td>
+											      <td>the Bird</td>
+											      <td>@twitter</td>
+											    </tr>
+											  </tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="l-guide">
+								<div class="l-guide__header">
+									<h1 class="l-guide__title">Content</h1>
+								</div>
+								<div class="l-guide__content">
+									<div class="c-guide">
+										<div class="c-guide__header">
+											<h2 class="c-guide__title">Alert</h2>
+										</div>
+										<div class="c-guide__content">
+											<div class="row">
+												<div class="col">
+													<div class="c-alert alert alert-success alert-dismissible fade show" role="alert">
+													  Success!
+													  <button type="button" class="c-close" data-dismiss="alert">&times;</button>
+													</div>
+												</div>
+												<div class="col">
+													<div class="c-alert alert alert-danger" role="alert">
+													  Danger!
+													</div>
+												</div>
+												<div class="col">
+													<div class="c-alert alert alert-warning" role="alert">
+													  Warning!
+													</div>
+												</div>
+												<div class="col">
+													<div class="c-alert alert alert-info" role="alert">
+													  Info!
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="c-guide">
+										<div class="c-guide__header">
+											<h2 class="c-guide__title">Badge</h2>
+										</div>
+										<div class="c-guide__content">
+											<span class="c-badge">Badge</span>
+											<span class="c-badge c-badge--rounded">Badge</span>
+										</div>
+									</div>
+									<div class="c-guide">
+										<div class="c-guide__header">
+											<h2 class="c-guide__title">Breadcrumb</h2>
+										</div>
+										<div class="c-guide__content">
+											<ol class="c-breadcrumb mb-3">
+										    <li class="c-breadcrumb__item"><a href="#">HTML</a></li>
+										    <li class="c-breadcrumb__item"><a href="#">Breadcrumb</a></li>
+										    <li class="c-breadcrumb__item"><a href="#">Sample</a></li>
+										    <li class="c-breadcrumb__item active">Style Guide</li>
+										  </ol>
+										</div>
+									</div>
+									<div class="c-guide">
+										<div class="c-guide__header">
+											<h2 class="c-guide__title">Buttons</h2>
+										</div>
+										<div class="c-guide__content">
+											<div class="row align-items-center mb-3">
+												<div class="col-12 mb-2 col-md-3 mb-md-0 col-lg-2">Normal</div>
+												<div class="col-12 col-md-9 col-lg-10">
+													<button type="button" class="btn c-button c-button--default">Default</button>
+													<button type="button" class="btn c-button c-button--default-outline">Outline</button>
+													<button type="button" class="btn c-button c-button--primary">Primary</button>
+													<button type="button" class="btn c-button c-button--primary-outline">Outline</button>
+													<button type="button" class="btn c-button c-button--secondary">Secondary</button>
+													<button type="button" class="btn c-button c-button--secondary-outline">Outline</button>
+												</div>
+											</div>
+											<div class="row align-items-center mb-3">
+												<div class="col-12 mb-2 col-md-3 mb-md-0 col-lg-2">Disabled</div>
+												<div class="col-12 col-md-9 col-lg-10">
+													<button type="button" disabled class="btn c-button c-button--default">Default</button>
+													<button type="button" disabled class="btn c-button c-button--default-outline">Outline</button>
+													<button type="button" disabled class="btn c-button c-button--primary">Primary</button>
+													<button type="button" disabled class="btn c-button c-button--primary-outline">Outline</button>
+													<button type="button" disabled class="btn c-button c-button--secondary">Secondary</button>
+													<button type="button" disabled class="btn c-button c-button--secondary-outline">Outline</button>
+												</div>
+											</div>
+											<div class="row align-items-center mb-3">
+												<div class="col-12 mb-2 col-md-3 mb-md-0 col-lg-2">Size</div>
+												<div class="col-12 col-md-9 col-lg-10">
+													<button type="button" class="btn btn-sm c-button c-button--default-outline">Small</button>
+													<button type="button" class="btn c-button c-button--default-outline">Default</button>
+													<button type="button" class="btn btn-lg c-button c-button--default-outline">Large</button>
+												</div>
+											</div>
+											<div class="row align-items-center mb-3">
+												<div class="col-12 mb-2 col-md-3 mb-md-0 col-lg-2">With icons</div>
+												<div class="col-12 col-md-9 col-lg-10">
+													<button type="button" class="btn c-button c-button--default"><i class="mdi mdi-home"></i></button>
+													<button type="button" class="btn c-button c-button--primary"><i class="mdi mdi-city mr-2"></i>Icon</button>
+													<button type="button" class="btn c-button c-button--secondary">Icon<i class="mdi mdi-checkerboard ml-2"></i></button>
+												</div>
+											</div>
+											<div class="row align-items-center mb-3">
+												<div class="col-12 mb-2 col-md-3 mb-md-0 col-lg-2">Social connect</div>
+												<div class="col-12 col-md-9 col-lg-10">
+													<div class="row">
+														<div class="col col-sm-6 col-xl-6">
+															<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--facebook"><i class="c-button--social__icon mdi mdi-facebook"></i>Sign in with Facebook</button>
+														</div>
+														<div class="col col-sm-6 col-xl-6">
+															<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--google"><i class="c-button--social__icon mdi mdi-google"></i>Continue with Google</button>
+														</div>
+														<div class="col col-sm-6 col-xl-6">
+															<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--twitter"><i class="c-button--social__icon mdi mdi-twitter"></i>View on Twitter</button>
+														</div>
+														<div class="col col-sm-6 col-xl-6">
+															<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--instagram"><i class="c-button--social__icon mdi mdi-instagram"></i>Connect with Instagram</button>
+														</div>
+														<div class="col col-sm-6 col-xl-6">
+															<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--youtube"><i class="c-button--social__icon mdi mdi-youtube"></i>View Youtube Channel</button>
+														</div>
+														<div class="col col-sm-6 col-xl-6">
+															<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--skype"><i class="c-button--social__icon mdi mdi-skype"></i>Chat on Skype</button>
+														</div>
+														<div class="col col-sm-6 col-xl-6">
+															<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--linkedin"><i class="c-button--social__icon mdi mdi-linkedin"></i>View profile on Linkedin</button>
+														</div>
+														<div class="col col-sm-6 col-xl-6">
+															<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--soundcloud"><i class="c-button--social__icon mdi mdi-soundcloud"></i>Listen on Soundcloud</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="c-guide">
+										<div class="c-guide__header">
+											<h2 class="c-guide__title">Collapse</h2>
+										</div>
+										<div class="c-guide__content">
+										  <div><a data-toggle="collapse" class="c-collapse-toggle" href="#collapseExample">Toggle Link i.</a></div>
+											<div class="collapse" id="collapseExample">
+											  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+											</div>
+											<div><a data-toggle="collapse" href="#collapseExample">Toggle Link</a></div>
+										</div>
+									</div>
+									<div class="c-guide">
+										<div class="c-guide__header">
+											<h2 class="c-guide__title">Dropdowns</h2>
+										</div>
+										<div class="c-guide__content">
+				  						<div class="dropdown c-dropdown d-inline-block">
+											  <button class="btn c-button c-button--default-outline" type="button" data-toggle="dropdown">Dropdown <i class="mdi mdi-chevron-down"></i></button>
+											  <div class="dropdown-menu c-dropdown-menu h-shadow-3">
+											    <a href="#" class="dropdown-item c-dropdown-menu__item active">Action</a>
+											    <a href="#" class="dropdown-item c-dropdown-menu__item">Another action</a>
+											    <div class="c-dropdown-menu__divider"></div>
+											    <a href="#" class="dropdown-item c-dropdown-menu__item disabled">Something else here</a>
+											  </div>
+											</div>
+											<div class="dropdown c-dropdown d-inline-block">
+											  <button class="btn btn-sm c-button c-button--default-outline" type="button" data-toggle="dropdown">Dropdown SM <i class="mdi mdi-chevron-down"></i></button>
+											  <div class="dropdown-menu dropdown-menu-right c-dropdown-menu c-dropdown-menu--sm h-shadow-3">
+											    <a href="#" class="dropdown-item c-dropdown-menu__item active">Action</a>
+											    <a href="#" class="dropdown-item c-dropdown-menu__item">Another action</a>
+											    <div class="c-dropdown-menu__divider"></div>
+											    <a href="#" class="dropdown-item c-dropdown-menu__item disabled">Something else here</a>
+											  </div>
+											</div>
+											<div class="dropdown c-dropdown d-inline-block">
+											  <button class="btn c-button c-button--default-outline" type="button" data-toggle="dropdown">More Options <i class="mdi mdi-chevron-down"></i></button>
+											  <div class="dropdown-menu c-dropdown-menu h-shadow-3" style="width: 240px">
+											  	<h6 class="dropdown-header c-dropdown-menu__header">Dropdown header</h6>
+											    <form class="px-3 py-2">
+												    <div class="form-group mb-2">
+												      <label for="#" class="c-form__label c-form__label--sm">Email address</label>
+												      <input type="email" class="form-control form-control-sm c-form__control" placeholder="email@example.com">
+												    </div>
+												    <div class="form-group mb-2">
+												      <label for="#" class="c-form__label c-form__label--sm">Password</label>
+												      <input type="password" class="form-control form-control-sm c-form__control" placeholder="Password">
+												    </div>
+												    <div class="form-group mb-2">
+													    <div class="form-check c-form-check c-form-check--sm">
+													      <input type="checkbox" class="form-check-input c-form-check__input" id="dropdownCheck">
+													      <label class="form-check-label c-form-check__label" for="dropdownCheck">Remember me</label>
+													    </div>
+													  </div>
+												    <button type="submit" class="btn btn-sm btn-block c-button c-button--primary">Sign in</button>
+												  </form>
+											    <div class="c-dropdown-menu__divider"></div>
+											    <p class="my-0 h-fz-xs px-3 py-1">Some example text that's free-flowing within the dropdown menu.</p>
+											  </div>
+											</div>
+										</div>
+									</div>
+									<div class="c-guide">
+										<div class="c-guide__header">
+											<h2 class="c-guide__title">Forms & Input Group</h2>
+										</div>
+										<div class="c-guide__content">
+											<div class="row">
+												<div class="col-12 col-sm-6">
+													<div class="c-form">
+														<div class="form-group">
+													    <label for="#" class="c-form__label">Label</label>
+													    <input type="text" class="form-control c-form__control" placeholder="Input">
+													    <div class="c-form__help-text">Form input help text</div>
+													  </div>
+													  <div class="form-group">
+													  	<input type="text" class="form-control form-control-sm c-form__control" placeholder="Input size sm">
+													  </div>
+													  <div class="form-group">
+													  	<input type="text" class="form-control form-control-lg c-form__control" placeholder="Input size lg">
+													  </div>
+													  <div class="form-group">
+													    <label for="#" class="c-form__label">Select</label>
+													    <select class="form-control c-form__control">
+													      <option selected>1</option>
+													      <option>2</option>
+													      <option>3</option>
+													      <option>4</option>
+													      <option>5</option>
+													    </select>
+													  </div>
+													  <div class="form-group">
+													    <label for="#" class="c-form__label">Example textarea</label>
+													    <textarea class="form-control c-form__control" rows="3" placeholder="Textarea"></textarea>
+													  </div>
+													  <div class="form-group">
+													    <label for="#" class="c-form__label" for="exampleFormControlFile1">Example file input</label>
+													    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+													  </div>
+													  <div class="form-group">
+													  	<label for="#" class="c-form__label">Readonly</label>
+													  	<input class="form-control c-form__control" type="text" placeholder="Readonly input" readonly>
+													  </div>
+													  <div class="form-group">
+													  	<label for="#" class="c-form__label">Disabled</label>
+													  	<input class="form-control c-form__control" type="text" placeholder="Disabled input" disabled>
+													  </div>
+													  <div class="form-group">
+							      					<input type="text" class="form-control-plaintext" value="Readonly - Plain Text" readonly>
+													  </div>
+													  <div class="form-group">
+													  	<div class="form-check c-form-check my-1">
+															  <input class="form-check-input c-form-check__input" type="checkbox" value="" id="defaultCheck1">
+															  <label class="form-check-label c-form-check__label" for="defaultCheck1">Default checkbox</label>
+															</div>
+															<div class="form-check c-form-check my-1">
+															  <input class="form-check-input c-form-check__input" type="checkbox" value="" id="defaultCheck2" disabled>
+															  <label class="form-check-label c-form-check__label" for="defaultCheck2">Disabled checkbox</label>
+															</div>
+													  </div>
+													  <div class="form-group">
+															<div class="form-check c-form-check my-1">
+															  <input class="form-check-input c-form-check__input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+															  <label class="form-check-label c-form-check__label" for="exampleRadios1">Default radio</label>
+															</div>
+															<div class="form-check c-form-check my-1">
+															  <input class="form-check-input c-form-check__input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+															  <label class="form-check-label c-form-check__label" for="exampleRadios2">Second default radio</label>
+															</div>
+															<div class="form-check c-form-check my-1">
+															  <input class="form-check-input c-form-check__input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+															  <label class="form-check-label c-form-check__label" for="exampleRadios3">Disabled radio</label>
+															</div>
+													  </div>
+													  <div class="form-group">
+													  	<div class="form-check form-check-inline c-form-check c-form-check--inline my-1">
+															  <input class="form-check-input c-form-check__input" type="checkbox" id="inlineCheckbox1" value="option1">
+															  <label class="form-check-label c-form-check__label" for="inlineCheckbox1">1</label>
+															</div>
+															<div class="form-check form-check-inline c-form-check c-form-check--inline my-1">
+															  <input class="form-check-input c-form-check__input" type="checkbox" id="inlineCheckbox2" value="option2">
+															  <label class="form-check-label c-form-check__label" for="inlineCheckbox2">2</label>
+															</div>
+															<div class="form-check form-check-inline c-form-check c-form-check--inline my-1">
+															  <input class="form-check-input c-form-check__input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+															  <label class="form-check-label c-form-check__label" for="inlineCheckbox3">3 (disabled)</label>
+															</div>
+															<div class="form-check form-check-inline c-form-check c-form-check--inline my-1">
+															  <input class="form-check-input c-form-check__input" type="radio" value="" id="inlineCheck1">
+															  <label class="form-check-label c-form-check__label" for="inlineCheck1">1</label>
+															</div>
+															<div class="form-check form-check-inline c-form-check c-form-check--inline my-1">
+															  <input class="form-check-input c-form-check__input" type="radio" value="" id="inlineCheck1">
+															  <label class="form-check-label c-form-check__label" for="inlineCheck1">2</label>
+															</div>
+															<div class="form-check form-check-inline c-form-check c-form-check--inline my-1">
+															  <input class="form-check-input c-form-check__input" type="radio" value="" id="inlinetCheck2" disabled>
+															  <label class="form-check-label c-form-check__label" for="inlineCheck2">3 (disabled)</label>
+															</div>
+													  </div>
+													</div>
+												</div>
+												<div class="col-12 col-sm-6">
+													<div class="form-group">
+														<label for="#" class="c-form__label">Form Row</label>
+														<div class="form-row">
+															<div class="col">
+																<input type="text" class="form-control c-form__control" placeholder="Input">
+															</div>
+															<div class="col">
+																<input type="text" class="form-control c-form__control" placeholder="Input">
+															</div>
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="#" class="c-form__label">Input group</label>
+														<div class="input-group c-input-group">
+														  <div class="input-group-prepend">
+														    <span class="input-group-text c-input-group__text">@prepend</span>
+														  </div>
+														  <input type="text" class="form-control c-form__control" placeholder="Input">
+															<div class="input-group-append">
+														    <span class="input-group-text c-input-group__text">@append</span>
+														    <button class="btn c-button c-button--default-outline">Button</button>
+														  </div>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="input-group c-input-group">
+														  <div class="input-group-prepend c-input-group__prepend">
+														    <span class="input-group-text c-input-group__text">@</span>
+														  </div>
+														  <input type="text" class="form-control c-form__control" placeholder="Input">
+														  <select name="#" id="#" class="form-control c-form__control">
+														  	<option value="#" selected>Select</option>
+														  	<option value="#">1</option>
+														  	<option value="#">2</option>
+														  	<option value="#">3</option>
+														  	<option value="#">4</option>
+														  	<option value="#">5</option>
+														  </select>
+															<div class="input-group-append c-input-group__append">
+																<div class="dropdown c-dropdown">
+																  <button class="btn c-button c-button--default-outline" type="button" data-toggle="dropdown">Dropdown <i class="mdi mdi-chevron-down"></i></button>
+																  <div class="dropdown-menu dropdown-menu-right c-dropdown-menu c-dropdown-menu--sm h-shadow-3">
+																    <a href="#" class="dropdown-item c-dropdown-menu__item active">Action</a>
+																    <a href="#" class="dropdown-item c-dropdown-menu__item">Another action</a>
+																    <div class="c-dropdown-menu__divider"></div>
+																    <a href="#" class="dropdown-item c-dropdown-menu__item disabled">Something else here</a>
+																  </div>
+																</div>
+														  </div>
+														  <div class="input-group-append c-input-group__append">
+														  	<button class="btn c-button c-button--default-outline"><i class="mdi mdi-magnify h-fz-xl"></i></button>
+														  </div>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="input-group c-input-group">
+														  <div class="input-group-prepend">
+														    <span class="input-group-text c-input-group__text">@prepend</span>
+														  </div>
+														  <textarea class="form-control c-form__control" rows="3"></textarea>
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="#" class="c-form__label">Size</label>
+														<div class="input-group input-group-sm mb-2">
+														  <div class="input-group-prepend">
+														    <span class="input-group-text c-input-group__text" id="inputGroup-sizing-sm">Small</span>
+														  </div>
+														  <input type="text" class="form-control c-form__control">
+														  <div class="input-group-append c-input-group__append">
+														    <span class="input-group-text c-input-group__text">@append</span>
+														    <button class="btn c-button c-button--primary">Button</button>
+														  </div>
+														</div>
+														<div class="input-group mb-2">
+														  <div class="input-group-prepend">
+														    <span class="input-group-text c-input-group__text">Default</span>
+														  </div>
+														  <input type="text" class="form-control c-form__control">
+														  <div class="input-group-append c-input-group__append">
+														    <span class="input-group-text c-input-group__text">@append</span>
+														    <button class="btn c-button c-button--primary">Button</button>
+														  </div>
+														</div>
+														<div class="input-group input-group-lg">
+														  <div class="input-group-prepend c-input-group__prepend">
+														    <span class="input-group-text c-input-group__text">Large</span>
+														  </div>
+														  <input type="text" class="form-control c-form__control">
+														  <div class="input-group-append c-input-group__append">
+														    <span class="input-group-text c-input-group__text">@append</span>
+														    <button class="btn c-button c-button--primary">Button</button>
+														  </div>
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="#" class="c-form__label">Option</label>
+														<div class="d-flex align-items-center">
+															<div class="c-form-option">
+																<input type="checkbox" class="c-form-option__input" value="" id="Input__OptionDemo--option01" checked>
+																<label for="Input__OptionDemo--option01" class="c-form-option__label">
+																	<div class="c-form-option__image h-bg-cover" style="background-image: url('https://via.placeholder.com/128x72')"></div>
+																</label>
+															</div>
+															<div class="c-form-option">
+																<input type="checkbox" class="c-form-option__input" value="" id="Input__OptionDemo--option02" disabled>
+																<label for="Input__OptionDemo--option02" class="c-form-option__label">
+																	<div class="c-form-option__image h-bg-cover" style="background-image: url('https://via.placeholder.com/128x72')"></div>
+																</label>
+															</div>
+															<div class="c-form-option">
+																<input type="checkbox" class="c-form-option__input" value="" id="Input__OptionDemo--option03" checked disabled>
+																<label for="Input__OptionDemo--option03" class="c-form-option__label">
+																	<div class="c-form-option__image h-bg-cover" style="background-image: url('https://via.placeholder.com/128x72')"></div>
+																</label>
+															</div>
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="#" class="c-form__label">Option</label>
+														<div class="d-flex align-items-center">
+															<div class="c-form-option">
+																<input type="checkbox" class="c-form-option__input" value="" id="Input__OptionDemo--option04">
+																<label for="Input__OptionDemo--option04" class="c-form-option__label">
+																	<div class="c-form-option__text">Option Text</div>
+																</label>
+															</div>
+															<div class="c-form-option">
+																<input type="checkbox" class="c-form-option__input" value="" id="Input__OptionDemo--option05" disabled>
+																<label for="Input__OptionDemo--option05" class="c-form-option__label">
+																	<div class="c-form-option__text">Option Text</div>
+																</label>
+															</div>
+															<div class="c-form-option">
+																<input type="checkbox" class="c-form-option__input" value="" id="Input__OptionDemo--option06" checked disabled>
+																<label for="Input__OptionDemo--option06" class="c-form-option__label">
+																	<div class="c-form-option__text">Option Text</div>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="c-guide">
+										<div class="c-guide__header">
+											<h2 class="c-guide__title">Modal</h2>
+										</div>
+										<div class="c-guide__content">
+											<button type="button" class="btn c-button c-button--default-outline" data-toggle="modal" data-target="#exampleModal">Sample modal</button>
+										</div>
+									</div>
+									<div class="c-guide">
+										<div class="c-guide__header">
+											<h2 class="c-guide__title">Navs & Tabs</h2>
+										</div>
+										<div class="c-guide__content">
+											Navs & Tabs
+										</div>
+									</div>
+									<div class="c-guide">
+										<div class="c-guide__header">
+											<h2 class="c-guide__title">Pagination</h2>
+										</div>
+										<div class="c-guide__content">
+										  <nav>
+												<ul class="c-pagination">
+													<li class="c-pagination__item disabled"><a href="#" class="c-pagination__link"><i class="mdi mdi-chevron-double-left"></i></a></li>
+													<li class="c-pagination__item"><a href="#" class="c-pagination__link"><i class="mdi mdi-chevron-left"></i></a></li>
+													<li class="c-pagination__item"><a href="#" class="c-pagination__link">1</a></li>
+													<li class="c-pagination__item active"><a href="#" class="c-pagination__link">2</a></li>
+													<li class="c-pagination__item"><a href="#" class="c-pagination__link">3</a></li>
+													<li class="c-pagination__item"><span class="c-pagination__ellipsis">...</span></li>
+													<li class="c-pagination__item"><a href="#" class="c-pagination__link">99</a></li>
+													<li class="c-pagination__item"><a href="#" class="c-pagination__link">100</a></li>
+													<li class="c-pagination__item"><a href="#" class="c-pagination__link"><i class="mdi mdi-chevron-right"></i></a></li>
+													<li class="c-pagination__item"><a href="#" class="c-pagination__link c-pagination__link--next-page">Trang kế<i class="mdi mdi-chevron-right ml-1"></i></a></li>
+												</ul>
+											</nav>
+											<nav class="mt-2">
+												<ul class="c-pagination c-pagination--sm">
+													<li class="c-pagination__item disabled"><a href="#" class="c-pagination__link"><i class="mdi mdi-chevron-double-left"></i></a></li>
+													<li class="c-pagination__item"><a href="#" class="c-pagination__link"><i class="mdi mdi-chevron-left"></i></a></li>
+													<li class="c-pagination__item"><a href="#" class="c-pagination__link">1</a></li>
+													<li class="c-pagination__item active"><a href="#" class="c-pagination__link">2</a></li>
+													<li class="c-pagination__item"><a href="#" class="c-pagination__link">3</a></li>
+													<li class="c-pagination__item"><span class="c-pagination__ellipsis">...</span></li>
+													<li class="c-pagination__item"><a href="#" class="c-pagination__link">99</a></li>
+													<li class="c-pagination__item"><a href="#" class="c-pagination__link">100</a></li>
+													<li class="c-pagination__item"><a href="#" class="c-pagination__link"><i class="mdi mdi-chevron-right"></i></a></li>
+													<li class="c-pagination__item"><a href="#" class="c-pagination__link c-pagination__link--next-page">Trang kế<i class="mdi mdi-chevron-right ml-1"></i></a></li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+									<div class="c-guide">
+										<div class="c-guide__header">
+											<h2 class="c-guide__title">Popovers</h2>
+										</div>
+										<div class="c-guide__content">
+											Popovers
+										</div>
+									</div>
+									<div class="c-guide">
+										<div class="c-guide__header">
+											<h2 class="c-guide__title">Tooltips</h2>
+										</div>
+										<div class="c-guide__content">
+											Tooltips
+										</div>
+									</div>
+									<div class="c-guide">
+										<div class="c-guide__header">
+											<h2 class="c-guide__title"></h2>
+										</div>
+										<div class="c-guide__content">
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="c-card h-shadow-1 my-3 p-3">
+					<h3>Select2</h3>
+					<div class="row">
+						<div class="col col-lg-6">
+							<div class="form-group">
+								<select class="js-example-basic-single form-control c-form__control" name="state">
+									<optgroup label="Group Title 01">
+								    <option>Nested option</option>
+								    <option value="AL">Alabama</option>
+										<option value="NY" disabled>New Work</option>
+										<option value="CL">California</option>
+										<option value="NM">New Mexico</option>
+										<option value="TX">Texas</option>
+										<option value="WY">Wyoming</option>
+								  </optgroup>
+								  <optgroup label="Group Title 02">
+								  	<option value="MS">Matsachuset</option>
+										<option value="NJ">New Jersey</option>
+								  </optgroup>
+								</select>
+							</div>
+							<div class="form-group">
+								<select class="js-example-basic-multiple form-control c-form__control" name="states[]" multiple="multiple">
+								  <option value="AL" selected>Alabama</option>
+									<option value="NY" selected>New Work</option>
+									<option value="CL">California</option>
+									<option value="NM">New Mexico</option>
+									<option value="TX">Texas</option>
+									<option value="WY">Wyoming</option>
+									<option value="MS" disabled>Matsachuset</option>
+									<option value="NJ">New Jersey</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<h3>Touchspin</h3>
+					<div class="row">
+						<div class="col col-lg-6">
+							
+						</div>
+					</div>
+					<hr>
+					<h3>Date & Time Picker</h3>
+					<div class="row">
+						<div class="col col-lg-6">
+							//
+						</div>
+					</div>
+					<hr>
+					<h3></h3>
+				</div>
+				<div style="height: 150vh; width: 1px;"></div>
+			</div>
+		</div>
+		<footer id="SiteFooter" class="l-footer">
+			<div class="container">
+				
+			</div>
+		</footer>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal c-modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog c-modal__dialog" role="document">
+	    <div class="modal-content c-modal__content">
+	      <div class="modal-header c-modal__header">
+	        <h5 class="modal-title c-modal__title">Modal title</h5>
+	        <button type="button" class="close c-modal__close h-outline-none" data-dismiss="modal">&times;</button>
+	      </div>
+	      <div class="modal-body c-modal__body">
+	        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
+	        <p>Tôi sẽ nhớ những ngày nắng lang thang khắp ngõ ngách ở thành phố Vienna (Áo) hay buổi chiều tản bộ bên dòng sông Seine (Pháp) thơ mộng. Những lúc ngồi trên chiếc thuyền nho nhỏ, thả mình vào bản nhạc du dương và nhẹ nhàng, len lỏi khắp các kênh đào ngắm nhìn thành phố của tình yêu khiến tôi nhận ra Venice (Italy) thật đẹp và lãng mạn. Suốt 22 ngày, tôi hạnh phúc khi rong chơi đến những vùng đất mình tự gọi là tiên cảnh hạ giới, để lại dấu chân qua ngôi làng cổ Hallstatt (Áo), hít mùi hương mát lạnh khi đứng trước dãy núi trùng điệp và hùng vĩ ở Thụy Sĩ...</p>
+	      </div>
+	      <div class="modal-footer c-modal__footer">
+	        <button type="button" class="btn c-button c-button--default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn c-button c-button--primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Scripts -->
+	<script data-main="assets/js/main" src="assets/js/require.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+/* ============================================================================
+   UTILS -> mixins
+   ========================================================================= */
+
+
+/** 
+ * Breakpoint viewport sizes and media queries
+ */
+
+@mixin viewport-min($breakpoint){
+  $min: map-get($g-breakpoints, $breakpoint);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  }@else{
+    @content;
+  }  
+}
+@mixin viewport-max($breakpoint){
+	$max: map-get($g-breakpoints, $breakpoint);
+  @if $max {
+    @media (max-width: $max - 1) {
+      @content;
+    }
+  }@else{
+    @content;
+  }  
+}
+@mixin viewport-between($lower, $upper){
+  $min: map-get($g-breakpoints, $lower);
+  $max: map-get($g-breakpoints, $upper) - 1;
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  }@else if $max == null {
+    @include viewport-min($lower) {
+      @content;
+    }
+  }@else if $min == null {
+    @include viewport-max($upper) {
+      @content;
+    }
+  }
+}
+
+
+/**
+ * One text row limit (place '...' at the end)
+ */
+
+@mixin one-line-ellipsis($width: auto, $max-width: 100%){
+  display: block;
+  width: $width;
+  max-width: $max-width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/**
+ * Multiple text rows limit (place '...' at the end)
+ */
+
+@mixin multi-line-ellipsis($line-height, $lines-to-show, $height: false){
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: $lines-to-show * $line-height;
+  @if ($height){
+  	height: $lines-to-show * $line-height;
+  }
+}
+
+
+/**
+ * Button
+ */
+
+@mixin button-color($color, $bg-color, $bd-color, 
+                    $h-color: $color, $h-bg-color: $bg-color, $h-bd-color: $bd-color){
+  color: $color;
+  background-color: $bg-color;
+  border-color: $bd-color;
+  &:not(:disabled):not(.disabled){
+    &:hover{
+      color: $h-color;
+      background-color: $h-bg-color;
+      border-color: $h-bd-color;
+    }
+    &:active{
+      box-shadow: inset 0 3px 8px rgba(0,0,0,.08);
+    }
+  }
+}
+
+
+/**
+ * Customize scrollbar (webkit)
+ */
+
+@mixin scrollbar($size, 
+                 $primary,
+                 $secondary: lighten($primary, 40%), 
+                 $border-radius: $size / 2) {
+  &::-webkit-scrollbar {
+    width:  $size;
+    height: $size;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $primary;
+  }
+  &::-webkit-scrollbar-track {
+    background: $secondary;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: $border-radius;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: $border-radius;
+  }
+}
+
+
+/**
+ * Triangle
+ * top, bottom, left, right
+ * top-right, bottom-right, bottom-left, top-left
+ */
+
+@mixin triangle($direction, $width, $height, $color: #000){
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  @if $direction == 'top' {
+    border-width: 0 $width/2 $height $width/2;
+    border-color: transparent transparent $color transparent;
+  }@else if $direction == 'bottom' {
+    border-width: $height $width/2 0 $width/2;
+    border-color: $color transparent transparent transparent;
+  }@else if $direction == 'left' {
+    border-width: $height/2 $width $height/2 0;
+    border-color: transparent $color transparent transparent;
+  }@else if $direction == 'right' {
+    border-width: $height/2 0 $height/2 $width;
+    border-color: transparent transparent transparent $color;
+  }@else if $direction == 'top-right' {
+    border-width: 0 $width $height 0;
+    border-color: transparent $color transparent transparent;
+  }@else if $direction == 'bottom-right' {
+    border-width: 0 0 $width $height;
+    border-color: transparent transparent $color transparent;
+  }@else if $direction == 'bottom-left' {
+    border-width: $width 0 0 $height;
+    border-color: transparent transparent transparent $color;
+  }@else if $direction == 'top-left' {
+    border-width: $width $height 0 0;
+    border-color: $color transparent transparent transparent;
+  }@else{
+    @warn "=> ERROR: NO TRIANGLE TYPE FOUND!";
+  }
+}

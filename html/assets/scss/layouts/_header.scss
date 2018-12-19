@@ -1,0 +1,30 @@
+/* ============================================================================
+   LAYOUT -> header
+   ========================================================================= */
+
+
+.l-header{
+	$self: &;
+	&--guide{
+		#{$self}__logo{
+			padding-right: 1rem;
+			margin-right: 0.5rem;
+			border-right: 1px solid set-color('divider');
+			img{
+				display: block;
+				height: 48px;
+				width: auto;
+			}
+		}
+		#{$self}__title{
+			font-size: 2rem;
+			font-weight: set-font('weight', 'light');
+			color: $grey500;
+		}
+		#{$self}__credit{
+			font-size: set-font('size', 'xs');
+			font-weight: set-font('weight');
+			color: $grey500;
+		}
+	}
+}

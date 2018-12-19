@@ -1,0 +1,278 @@
+/* ============================================================================
+   UTILS -> variables
+   ========================================================================= */
+
+/**
+ * Global settings are namespaced with g- ("g" stands for "global")
+ * Local settings defined outside of the global settings.
+ */
+
+
+
+// ============================================================================
+
+/**
+ * Colors
+ */
+
+$white: #fff;
+$black: #000;
+
+// Bootstrap
+
+$blue:    #007bff;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #e83e8c;
+$red:     #dc3545;
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+$green:   #28a745;
+$teal:    #20c997;
+$cyan:    #17a2b8;
+
+$success:    $green;
+$info:       $cyan;
+$warning:    $yellow;
+$danger:     $red;
+
+
+// Material Colors
+
+$grey50:	material-color('grey', '50');
+$grey100:	material-color('grey', '100');
+$grey200:	material-color('grey', '200');
+$grey300:	material-color('grey', '300');
+$grey400:	material-color('grey', '400');
+$grey500:	material-color('grey', '500');
+$grey600:	material-color('grey', '600');
+$grey700:	material-color('grey', '700');
+$grey800:	material-color('grey', '800');
+$grey900:	material-color('grey', '900');
+
+
+/**
+ * Global color map
+ */
+
+$g-colors: (
+	'primary': (
+		'base': 		material-color('indigo', '500'),
+		'darker': 	material-color('indigo', '700'),
+		'lighter': 	material-color('indigo', '400')
+	),
+	'secondary': (
+		'base': 		material-color('teal', '500'),
+		'darker': 	material-color('teal', '700'),
+		'lighter': 	material-color('teal', '400')
+	),
+	'text': (
+		'base': 		$grey900,
+		'sub': 			$grey600,
+		'disabled': $grey400
+	),
+	'background': (
+		'base': 		$grey100,
+		'darker': 	$grey200,
+		'dark': 		$grey300,
+		'lighter': 	$grey50
+	),
+	'divider': (
+		'base': 		rgba(#000, .08),
+		'dark':			rgba(#000, .12),
+		'darker':		rgba(#000, .12),
+		'light': 		rgba(#fff, .08),
+		'lighter': 	rgba(#fff, .12),
+	),
+	'form': (
+		'label': 									$grey700,
+		'text': 									$grey800,
+		'background':							#fff,
+		'text--readonly':					$grey800,
+		'background--readonly':		$grey100,
+		'text--disabled':					$grey500,
+		'background--disabled':		$grey200,
+		'placeholder': 						$grey400,
+		'border': 								$grey300,
+		'border--on-hover': 			$grey300,
+		'border--on-focus':				$grey400
+	),
+	'table': (
+		'border': 								$grey300,
+	),
+	'social': (
+		'facebook': 		#3b5999,
+		'google': 			#dd4b39,
+		'youtube':			#cd201f,
+		'twitter': 			#55acee,
+		'instagram': 		#e4405f,
+		'skype':				#00AFF0,
+		'linkedin':			#007bb6,
+		'soundcloud': 	#ff3300
+	)
+);
+
+
+/**
+ * Retrieve color values
+ */
+
+@function set-color($color, $tone: 'base') {
+  $color: map-get(map-get($g-colors, $color), $tone);
+  @if $color{
+    @return $color;
+  }@else{
+    @warn "=> ERROR: COLOR NOT FOUND!";
+  }
+}
+
+
+
+// ============================================================================
+
+/**
+ * Breakpoints & Grid
+ * (Bootstrap 4 default variables)
+ */
+
+$g-breakpoints: (
+  'xs': 0,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px
+);
+$g-container: (
+  'sm': 540px,
+  'md': 720px,
+  'lg': 960px,
+  'xl': 1140px
+);
+
+$g-gap: 16px;
+
+
+
+// ============================================================================
+
+/**
+ * Fonts
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,400,500,700&subset=vietnamese');
+
+$ff-merriweather: 	'Merriweather', serif;
+$ff-noto-sans: 			'Noto Sans SC', sans-serif;;
+
+$ff-main: 					$ff-noto-sans;
+
+$g-fonts: (
+	'family': (
+		'base': 			$ff-main
+	),
+	'size': (
+		'xxxl': 			1.4rem,				// 24px
+		'xxl': 				1.375rem, 		// 22px
+		'xl': 				1.25rem, 			// 20px
+		'lg': 				1.125rem,			// 18px
+		'base': 			1rem, 				// 16px
+		'sm': 				.875rem,			// 14px
+		'xs': 				.75rem,				// 12px
+		'xxs': 				.6875rem,			// 11px
+		'xxxs': 			.625rem				// 10px
+	),
+	'weight': (
+		'light': 			300,
+		'base': 			400,
+		'medium': 		500,
+		'semibold': 	600,
+		'bold': 			700
+	),
+);
+
+/** 
+ * Retrieves a font property value from the $g-fonts map
+ */
+
+@function set-font($property, $value: 'base') {
+  $value: map-get(map-get($g-fonts, $property), $value);
+  @if $value {
+    @return $value;
+  }@else{
+    @warn '=> ERROR: FONT PROPERTY NOT FOUND!';
+  }
+}
+
+/** 
+ * Line height
+ */
+
+$g-line-height: 1.5;
+
+/** 
+ * Heading
+ */
+
+$g-heading: (
+	'font-size': 			(1.75rem, 1.5rem, 1.25rem, 1rem, .875rem, .75rem),
+	'font-weight': 		set-font('weight', 'medium'),
+	'line-height': 		(1.25, 1.25, 1.375, 1.5, 1.5, 1.5),
+	'margin-bottom': 	(1.5rem, 1.5rem, 1.25rem, 1.25rem, 1rem, 1rem)
+);
+
+/** 
+ * Link
+ */
+
+$g-link: (
+	'color': 									set-color('primary'),
+	'color--on-hover':				set-color('primary'),
+	'decoration': 						none,
+	'decoration--on-hover': 	none,
+);
+
+
+
+// ============================================================================
+
+/**
+ * Easings
+ */
+
+$g-easing: (
+	'linear':           			linear,
+	'ease-in-out':           	ease-in-out, 
+	'ease-in-out-cubic':     	cubic-bezier(0.645, 0.045, 0.355, 1.000), 
+	'ease-in-out-quart':     	cubic-bezier(0.770, 0.000, 0.175, 1.000),
+	'ease-in-out-quint':     	cubic-bezier(0.860, 0.000, 0.070, 1.000),
+	'ease-in-out-expo':     	cubic-bezier(1.000, 0.000, 0.000, 1.000),
+	'ease-in-out-circ':     	cubic-bezier(0.785, 0.135, 0.150, 0.860)
+);
+
+
+
+// ============================================================================
+
+/**
+ * z-index
+ */
+
+$g-z-index: (
+
+	// Bootstrap default
+	'header': 					1000,
+	'sticky':           1020,
+	'fixed':            1030,
+	'modal-backdrop':   1040,
+	'modal':            1050,
+	'popover':          1060,
+	'tooltip':          1070
+
+	// Custom
+);
+
+
+// ============================================================================
+
+
+$g-bdrd: 2px;

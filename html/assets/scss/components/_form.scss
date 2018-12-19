@@ -1,0 +1,206 @@
+/* ============================================================================
+   COMPONENTS -> form
+   ========================================================================= */
+
+/**
+ * Input
+ */
+
+.c-form{
+
+	// --------------
+	&__label{
+		font-size: set-font('size', 'sm');
+		color: set-color('form', 'label');
+		&--sm{
+			font-size: set-font('size', 'xs');
+			margin-bottom: 0.375rem;
+		}
+		&--lg{
+			font-size: set-font('size');
+			margin-bottom: 0.625rem;
+		}
+	}
+
+	// --------------
+	&__control{
+		font-weight: set-font('weight');
+		color: set-color('form', 'text');
+		border-color: set-color('form', 'border');
+		@include transition-property(color, background-color, border-color);
+		@include transition-duration(.2s);
+		@include transition-timing-function(ease-in-out);
+		@include input-placeholder {
+	    color: set-color('form', 'placeholder');
+	  }
+		&,
+		&:hover,
+		&:focus,
+		&:active{
+			outline: none;
+			box-shadow: 0 0 0;
+		}
+		&:not(:disabled):not(.disabled){
+			&:focus{
+				border-color: set-color('form', 'border--on-focus');
+			}
+		}
+		&:disabled,
+		&.disabled{
+			color: set-color('form', 'text--disabled');
+			background-color: set-color('form', 'background--disabled');
+			opacity: .8;
+			@include input-placeholder {
+		    color: set-color('form', 'text--disabled');
+		  }
+		}
+		&[readonly],
+		&.readonly{
+		  background-color: set-color('form', 'background--readonly');
+			@include input-placeholder {
+		    color: set-color('form', 'text--readonly');
+		  }
+			&:focus{
+				border-color: set-color('form', 'border') !important;
+			}
+		}
+	}
+
+	// --------------
+	&__help-text{
+		margin: .25rem 0 0;
+		font-size: set-font('size', 'xs');
+		color: set-color('text', 'sub');
+	}
+}
+
+
+/**
+ * Checkbox & Radio
+ */
+
+.c-form-check{
+	$self: &;
+	&--inline{
+		margin-right: 1rem;
+		#{$self}__input{
+			margin-right: 0;
+			margin-top: .125rem;
+		}
+		#{$self}__label{
+			padding-left: 0.3125rem;
+		}
+	}
+	&--sm{
+		.c-form-check-label{
+			font-size: set-font('size', 'sm');
+		}
+	}
+	&__input{
+
+		margin-top: .5rem;		
+		cursor: pointer;
+		&:disabled{
+			cursor: default;
+		}
+		&:disabled ~ #{$self}__label {
+	    color: set-color('form', 'text--disabled');
+	    cursor: default;
+		}
+	}
+	&__label{
+		line-height: 1.5rem;
+		cursor: pointer;
+	}
+}
+
+
+
+/**
+ * Input group
+ */
+
+.c-input-group{
+	&__text{
+		color: set-color('form', 'text--readonly');
+		background-color: set-color('form', 'background--readonly');
+		border-color: set-color('form', 'border');
+	}
+}
+
+/**
+ * Custom Option
+ */
+
+.c-form-option{
+	$self: &;
+	flex: 0 0 auto;
+	min-width: 0;
+	max-width: none;
+	margin-right: 1rem;
+	&__input{
+		@extend %visually-hidden;
+		&:disabled,
+		&.disabled{
+			& ~ #{$self}__label{
+				pointer-events: none;
+				opacity: .6;
+			}
+		}
+		&:checked{
+			& ~ #{$self}__label{
+				border-color: set-color('primary');
+				&:before,
+				&:after{
+					opacity: 1;
+				}
+				&:after{
+					@include triangle('bottom-right', 20px, 20px, set-color('primary'));
+				}
+			}
+		}
+	}
+	&__label{
+		position: relative;
+		display: block;
+		padding: 2px;
+		margin: 0;
+		border: 1px solid set-color('form', 'border');
+		cursor: pointer;
+		@include transition(border-color .1s ease-in-out);
+		&:before,
+		&:after{
+			display: block;
+			opacity: 0;
+			@include transition(opacity .1s ease-in-out);
+		}
+		&:before{
+			@extend %mdi-icon;
+			content: '\F12C';
+			position: absolute;
+			bottom: -1px; right: -1px;
+			line-height: 14px;
+			width: 14px;
+			font-size: 12px;
+			text-align: center;
+			color: #fff;
+			z-index: 60;
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			bottom: 0; right: 0;
+			@include triangle('bottom-right', 20px, 20px, transparent);
+			z-index: 50;
+		}
+	}
+	&__image{
+		width: 72px;
+		height: 72px;
+	}
+	&__text{
+		padding: .25rem .75rem;
+	}
+}
+
+

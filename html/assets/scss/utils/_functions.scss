@@ -1,0 +1,29 @@
+/* ============================================================================
+   UTILS -> functions
+   ========================================================================= */
+
+/**
+ * Retrieves a color value from the $g-color and $color Sass map
+ */
+
+@function set-color($scheme, $color, $tone: 'base') {
+  $color: map-get(map-get($scheme, $color), $tone);
+  @if $color {
+    @return $color;
+  }@else{
+    @warn "=> ERROR: COLOR NOT FOUND!";
+  }
+}
+
+
+
+
+
+/** 
+ * Convert PX to REM
+ */
+
+@function px-to-rem($px){
+  $base: 16px;
+  @return $base / $px * 1rem;
+}

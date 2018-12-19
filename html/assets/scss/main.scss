@@ -1,0 +1,72 @@
+/**
+ * 
+ * MAIN STYLE
+ * ----------------------------------------------------------------------------
+ * Template Name:
+ * Description:
+ * Time:
+ * ----------------------------------------------------------------------------
+ * Hiep Ta | henry9.com | contact@henry9.com
+ * 
+ */
+
+
+// Compass Framework
+@import 'compass/css3';
+
+// Vendors
+@import 'vendors/_module';
+
+// Modules
+@import 'utils/_module';
+@import 'base/_module';
+@import 'components/_module';
+@import 'layouts/_module';
+@import 'pages/_module';
+@import 'themes/_module';
+
+
+
+
+/**
+ * NAMESPACE GUIDE
+ *
+ * l- 	: Layout
+ * c- 	: Components
+ * h- 	: Helpers
+ * t- 	: Themes
+ * s- 	: Scoped
+ * _ 		: Hack
+ * 
+ * js- 				: JS hooks
+ * is-/has- 	: State hooks
+ * ss- 				: Server-side hooks
+ * qa- 				: QA hooks
+ * track- 		: Tracking hooks
+ */
+
+
+/**
+ * JS HOOK CLASSES
+ *
+ * is-active
+ * has-loaded
+ * is-loading
+ * is-visible
+ * is-disabled
+ * is-expanded
+ * is-collapsed
+ */
+
+
+/**
+ * SIZE
+ *
+ * -xxs
+ * -xs
+ * -sm
+ * -md (default)
+ * -lg
+ * -xl
+ * -xxl
+ */

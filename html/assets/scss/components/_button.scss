@@ -1,0 +1,83 @@
+/* ============================================================================
+   COMPONENTS -> button
+   ========================================================================= */
+
+/**
+ * Custom bootstrap button, need to add class "btn"
+ */
+
+.c-button{
+	@include transition(color .1s ease-in-out, 
+											background-color .1s ease-in-out, 
+											border-color .1s ease-in-out,
+											box-shadow .1s ease-in-out);
+	&,
+	&:hover,
+	&:focus,
+	&:active,
+	&:visited{
+		text-decoration: none;
+		box-shadow: 0 0 0;
+	}
+	& > i{
+		display: inline-block;
+		vertical-align: baseline;
+		line-height: 1;
+	}
+	// colors
+	&--default{
+		@include button-color(set-color('text'), set-color('background', 'darker'), transparent,
+													set-color('text'), set-color('background', 'darker'), transparent);
+	}
+	&--default-outline{
+		@include button-color(set-color('text'), #fff, set-color('form', 'border'),
+													set-color('text'), #fff , set-color('form', 'border'));
+	}
+	&--primary{
+		@include button-color(#fff, set-color('primary'), transparent,
+													#fff, set-color('primary', 'darker'), transparent);
+	}
+	&--primary-outline{
+		@include button-color(set-color('primary', 'darker'), #fff, set-color('primary'),
+													set-color('primary', 'darker'), set-color('background', 'darker'), set-color('primary', 'darker'));
+	}
+	&--secondary{
+		@include button-color(#fff, set-color('secondary'), transparent,
+													#fff, set-color('secondary', 'darker'), transparent);
+	}
+	&--secondary-outline{
+		@include button-color(set-color('secondary', 'darker'), #fff, set-color('secondary'),
+													set-color('secondary', 'darker'), set-color('background', 'darker'), set-color('secondary', 'darker'));
+	}
+	
+
+	// social
+	&--social{
+		$self: &;
+		&--has-icon{
+			position: relative;
+			padding-left: 2.5rem + .75rem;
+			#{$self}__icon{
+				position: absolute;
+				top: 50%; margin-top: -14px;
+				left: 0;
+				width: 2.5rem;
+				line-height: 28px;
+				font-size: 1.25rem;
+				text-align: center;
+				border-right: 1px solid set-color('divider', 'light');
+			}
+		}
+	}
+	@each $social-name, $social-color in map-get($g-colors, 'social'){
+		&--social--#{$social-name}{
+			@include button-color(#fff, $social-color, transparent,
+														#fff, darken($social-color, 5%), transparent);
+		}
+	}
+
+	&.disabled, 
+	&:disabled{
+		opacity: .6;
+	}
+}
