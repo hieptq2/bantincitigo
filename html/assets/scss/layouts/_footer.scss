@@ -4,5 +4,11 @@
 
 
 .l-footer{
-	//
+	margin: 4rem 0 0;
+	&__copyright{
+		padding: 1rem 0;
+		font-size: set-font('size', 'xs');
+		color: $grey500;
+		border-top: 1px solid set-color('divider');
+	}
 }

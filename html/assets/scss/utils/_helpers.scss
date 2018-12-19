@@ -78,6 +78,12 @@
 	background-color: #000 !important;
 }
 
+@each $color, $range in $gradients{
+	.h-bgc--gradient-#{$color}{
+		@include background-image(linear-gradient(to center right, nth($range, 1), nth($range, 2)));
+	}
+}
+
 // shadow
 
 .h-shadow-1{

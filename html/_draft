@@ -1,0 +1,35 @@
+section
+
+layout
+	cover-slider
+	nav-menu (header)
+		--home
+		--page
+	list-news
+	list-members
+	list-searchs
+	single-news
+	404
+	footer
+
+component
+	text
+		title
+		headline
+		body
+	card
+		news
+		member
+		recruit
+		search
+		author
+
+
+news
+honor
+member
+recruitment
+promotion
+policy
+activity
+entertainment

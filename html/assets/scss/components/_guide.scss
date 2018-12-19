@@ -119,6 +119,7 @@
 				&--w500{ font-weight: set-font('weight', 'medium'); }
 				&--w600{ font-weight: set-font('weight', 'semibold'); }
 				&--w700{ font-weight: set-font('weight', 'bold'); }
+				&--w800{ font-weight: set-font('weight', 'extrabold'); }
 			}
 		}
 	}
@@ -200,6 +201,18 @@
 				&--cyan{ 		background-color: $cyan; &:after{ content: '#{$cyan}'; color: #fff; } }
 				&--yellow{ 	background-color: $yellow; &:after{ content: '#{$yellow}'; color: #fff; } }
 				&--red{ 		background-color: $red; &:after{ content: '#{$red}'; color: #fff; } }
+
+				@each $color, $range in $gradients{
+					&--gradient-#{$color}{
+						&:after{ 
+							content: '#{nth($range, 1)} - #{nth($range, 2)}'; 
+							color: #fff;
+						}
+					}
+				}
+				&--gradient{
+					&-blue{ }
+				}
 			}
 			&-content{
 				margin: .5rem 0 0;

@@ -50,6 +50,17 @@ $grey700:	material-color('grey', '700');
 $grey800:	material-color('grey', '800');
 $grey900:	material-color('grey', '900');
 
+$gradients: (
+	'blue': 					(#4260c6, #6881d3),
+	'yellow': 				(#ffb400, #f2ba61),
+	'green': 					(#4bac4d, #65b167),
+	'light-blue': 		(#0090da, #3ea7dd),
+	'cyan': 					(#00adce, #00adce),
+	'violet': 				(#8c65d3, #9e81d4),
+	'light-violet': 	(#9a93ec, #b0abed),
+	'orange': 				(#fd5b36, #f67b5f)
+);
+
 
 /**
  * Global color map
@@ -57,14 +68,14 @@ $grey900:	material-color('grey', '900');
 
 $g-colors: (
 	'primary': (
-		'base': 		material-color('indigo', '500'),
-		'darker': 	material-color('indigo', '700'),
-		'lighter': 	material-color('indigo', '400')
+		'base': 		#1e65b5,
+		'darker': 	darken(#1e65b5, 8%),
+		'lighter': 	lighten(#1e65b5, 6%)
 	),
 	'secondary': (
-		'base': 		material-color('teal', '500'),
-		'darker': 	material-color('teal', '700'),
-		'lighter': 	material-color('teal', '400')
+		'base': 		#ee7200,
+		'darker': 	darken(#ee7200, 8%),
+		'lighter': 	lighten(#ee7200, 6%)
 	),
 	'text': (
 		'base': 		$grey900,
@@ -159,12 +170,12 @@ $g-gap: 16px;
  * Fonts
  */
 
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,400,500,700&subset=vietnamese');
+@import url('https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i,800,800i&subset=vietnamese');
 
 $ff-merriweather: 	'Merriweather', serif;
-$ff-noto-sans: 			'Noto Sans SC', sans-serif;;
+$ff-muli: 					'Muli', sans-serif;
 
-$ff-main: 					$ff-noto-sans;
+$ff-main: 					$ff-muli;
 
 $g-fonts: (
 	'family': (
@@ -182,11 +193,12 @@ $g-fonts: (
 		'xxxs': 			.625rem				// 10px
 	),
 	'weight': (
-		'light': 			300,
-		'base': 			400,
-		'medium': 		500,
-		'semibold': 	600,
-		'bold': 			700
+		'light': 				300,
+		'base': 				400,
+		'medium': 			500,
+		'semibold': 		600,
+		'bold': 				700,
+		'extrabold': 		800,
 	),
 );
 

@@ -24,13 +24,13 @@
         // 'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js',
         'libs/jquery.easing.min'
       ],	
-      'swiper': [
-        // https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/js/swiper.min.js,
-        'libs/swiper.min'
-      ],
-      'select2': [
-        'libs/select2.full.min'
-      ],
+      // 'swiper': [
+      //   // https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/js/swiper.min.js,
+      //   'libs/swiper.min'
+      // ],
+      // 'select2': [
+      //   'libs/select2.full.min'
+      // ],
 
       // modules
       'base':           'modules/base',
@@ -62,7 +62,7 @@
       },
 
       'components':{
-        deps: ['jquery', 'bootstrap', 'swiper', 'easing', 'select2']
+        deps: ['jquery', 'bootstrap', 'easing']
       },
       
     }

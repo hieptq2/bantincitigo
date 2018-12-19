@@ -4,7 +4,26 @@
 
 
 .c-card{
+	$self: &;
+	display: block;
 	margin-bottom: 1rem;
 	padding: 1rem;
 	background-color: #fff;
+	&--news{
+		display: flex;
+		align-items: center;
+		padding: 0;
+		margin: 2rem 0;
+		#{$self}__thumbnail{
+			flex: 0 0 40%;
+			margin: 0 1.5rem 0 0;
+			.h-rectangle__inner{
+				border-radius: 1rem;
+			}
+		}
+		#{$self}__title{
+			margin: 0 0 .75rem;
+			font-weight: 600;
+		}
+	}
 }
