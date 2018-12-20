@@ -24,27 +24,41 @@
   
 </head>
 
-<body>
-	<div id="SiteContainer" class="site-container p-front">
+<body data-spy="scroll" data-target="#Scroolspy--Home__NavList" data-offset="0">
+	<div id="SiteContainer" class="site-container p-page">
 		<div class="container">
-			<div class="p-front__wrapper">
+			<div class="p-page__wrapper">
 				<header id="SiteHeader" class="l-header l-header--sidebar">
-					<nav class="header-nav">
+					<button class="header-toggle js-header-toggle">
+						<div class="toggle-icon">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</button>
+					<nav class="header-nav js-header-nav">
 						<h1 class="header-nav__logo">
 							<a href="#">
-								<img class="logo-image" src="assets/img/logo.jpg" alt="Citigo logo">
+								<img class="logo-image" src="assets/img/logo.png" alt="Citigo logo">
 								<span class="logo-title"></span>
 							</a>
 						</h1>
-						<ul class="header-nav__list">
-							<li class="header-nav__item"><a href="#"><i class="item-icon fas fa-newspaper"></i><span class="item-label">Tin tức</span></a></li>
-							<li class="header-nav__item"><a href="#"><i class="item-icon fas fa-award"></i><span class="item-label">Vinh danh</span></a></li>
-							<li class="header-nav__item"><a href="#"><i class="item-icon fas fa-user-check"></i><span class="item-label">Công dân mới</span></a></li>
-							<li class="header-nav__item"><a href="#"><i class="item-icon fas fa-users"></i><span class="item-label">Tuyển dụng</span></a></li>
-							<li class="header-nav__item"><a href="#"><i class="item-icon fas fa-edit"></i><span class="item-label">Quyết định</span></a></li>
-							<li class="header-nav__item"><a href="#"><i class="item-icon fas fa-check-double"></i><span class="item-label">Chính sách</span></a></li>
-							<li class="header-nav__item"><a href="#"><i class="item-icon fas fa-running"></i><span class="item-label">Hoạt động</span></a></li>
-							<li class="header-nav__item"><a href="#"><i class="item-icon fas fa-laugh"></i><span class="item-label">Giải trí</span></a></li>
+						<!-- <div class="header-nav__search">
+							<form action="#">
+								<div class="form-group mb-0">
+									<input type="text" class="form-control c-form-control">
+								</div>
+							</form>
+						</div> -->
+						<ul class="header-nav__list js-header-nav__list">
+							<li class="header-nav__item"><a href="#Section__Home--news" class="js-header-nav-item"><i class="item-icon fas fa-newspaper"></i><span class="item-label">Tin tức</span></a></li>
+							<li class="header-nav__item"><a href="#Section__Home--honor" class="js-header-nav-item"><i class="item-icon fas fa-award"></i><span class="item-label">Vinh danh</span></a></li>
+							<li class="header-nav__item"><a href="#Section__Home--member" class="js-header-nav-item"><i class="item-icon fas fa-user-check"></i><span class="item-label">Công dân mới</span></a></li>
+							<li class="header-nav__item"><a href="#Section__Home--recruitment" class="js-header-nav-item"><i class="item-icon fas fa-users"></i><span class="item-label">Tuyển dụng</span></a></li>
+							<li class="header-nav__item"><a href="#Section__Home--promotion" class="js-header-nav-item"><i class="item-icon fas fa-edit"></i><span class="item-label">Quyết định</span></a></li>
+							<li class="header-nav__item"><a href="#Section__Home--policy" class="js-header-nav-item"><i class="item-icon fas fa-check-double"></i><span class="item-label">Chính sách</span></a></li>
+							<li class="header-nav__item"><a href="#Section__Home--activity" class="js-header-nav-item"><i class="item-icon fas fa-running"></i><span class="item-label">Hoạt động</span></a></li>
+							<li class="header-nav__item"><a href="#Section__Home--entertainment" class="js-header-nav-item"><i class="item-icon fas fa-laugh"></i><span class="item-label">Giải trí</span></a></li>
 						</ul>
 					</nav>
 				</header>
@@ -52,11 +66,30 @@
 					<div id="SiteContent" class="l-content l-content--home" data-js-module="home">
 						<div class="l-content__wrapper">
 							<div class="l-main-content">
+
+								<!-- Home cover -->
 								<div class="l-cover">
-									
+									<div id="Carousel__Home--cover" class="carousel slide" data-ride="carousel">
+									  <div class="carousel-inner">
+									    <div class="carousel-item active">
+									      <div class="h-rectangle h-rectangle--r21">
+									      	<div class="h-rectangle__inner h-bg-cover" style="background-image: url('https://via.placeholder.com/960x480/80DEEA')"></div>
+									      </div>
+									    </div>
+									    <div class="carousel-item">
+									      <div class="h-rectangle h-rectangle--r21">
+									      	<div class="h-rectangle__inner h-bg-cover" style="background-image: url('https://via.placeholder.com/960x480/DCEDC8')"></div>
+									      </div>
+									    </div>
+									  </div>
+									  <a class="l-cover__control l-cover__control--prev" href="#Carousel__Home--cover" role="button" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+									  <a class="l-cover__control l-cover__control--next" href="#Carousel__Home--cover" role="button" data-slide="next"><i class="fas fa-chevron-right"></i></a>
+									</div>
 								</div>
+								<!-- END Home cover -->
+
 								<!-- Home news -->
-								<div class="l-home l-home--news">
+								<div id="Section__Home--news" class="l-home l-home--news">
 									<div class="l-home__header h-bgc--gradient-blue">
 										<h2 class="l-home__title"><a href="#"><i class="title-icon far fa-newspaper"></i>Tin tức</a></h2>
 									</div>
@@ -69,9 +102,9 @@
 													</div>
 												</a>
 												<div class="c-card__content">
-													<h3 class="c-card__title"><a href="#" class="s-color">News Title</a></h3>
-													<div class="c-card__excerpt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis.
-														<a href="#">Xem thêm</a>
+													<h3 class="c-card__title"><a href="#" class="s-color">Với Ole Gunnar Solskjaer, MU có một huấn luyện viên thấu hiểu đội bóng</a></h3>
+													<div class="c-card__excerpt">Jose Mourinho có một tình yêu với MU, nhưng chưa bao giờ hiểu được đội bóng này tường tận. Còn Solskjaer lại khác. Năm 1999, khoảnh khắc cựu sao người NaUy trượt dài ăn mừng trên thảm cỏ Nou Camp trở thành một trong những khoảnh khắc đáng nhớ nhất của "Sát thủ mang gương mặt trẻ thơ".
+														<a href="#" class="s-color see-more see-more--news">Xem thêm</a>
 													</div>
 												</div>
 											</div>
@@ -82,9 +115,9 @@
 													</div>
 												</a>
 												<div class="c-card__content">
-													<h3 class="c-card__title"><a href="#" class="s-color">News Title</a></h3>
-													<div class="c-card__excerpt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis.
-														<a href="#">Xem thêm</a>
+													<h3 class="c-card__title"><a href="#" class="s-color">Con người hòa nhã, lịch thiệp và cứng rắn</a></h3>
+													<div class="c-card__excerpt">Mọi thứ bắt đầu từ ấy. Solskjaer luôn khao khát gắn bó với MU, trên cương vị cầu thủ lẫn HLV. Ông không ngừng học hỏi Sir Alex Ferguson vĩ đại.
+														<a href="#" class="s-color see-more see-more--news">Xem thêm</a>
 													</div>
 												</div>
 											</div>
@@ -97,29 +130,33 @@
 								<!-- END Home news -->
 
 								<!-- Home honor-->
-								<div class="l-home l-home--honor">
+								<div id="Section__Home--honor" class="l-home l-home--honor">
 									<div class="l-home__header h-bgc--gradient-yellow">
 										<h2 class="l-home__title"><a href="#"><i class="title-icon fas fa-award"></i>Vinh danh công dân</a></h2>
 									</div>
 									<div class="l-home__content">
-										<p class="l-home__subtitle">Để ghi nhận cũng như động viên kịp thời những nỗ lực của tất cả các anh, chị nhân viên trong công ty trong chương trình Citigo Talent Awards Tháng 9, ban lãnh đạo Citigo đã khen thưởng danh hiệu BEST SALES dành cho Nhân viên kinh doanh và “ Gương mặt tiêu biểu” dành cho các phòng ban. Dưới đây là danh sách tháng 9</p>
+										<div class="row justify-content-center">
+											<div class="col-md-10">
+												<p class="l-home__post-content s-color text-center">Để ghi nhận cũng như động viên kịp thời những nỗ lực của tất cả các anh, chị nhân viên trong công ty trong chương trình Citigo Talent Awards Tháng 9, ban lãnh đạo Citigo đã khen thưởng danh hiệu BEST SALES dành cho Nhân viên kinh doanh và “ Gương mặt tiêu biểu” dành cho các phòng ban. Dưới đây là danh sách tháng 9</p>
+											</div>
+										</div>
 										<div class="l-home__list-honors">
 											<div class="row">
 												<div class="col-6 col-md-4">
 													<a href="#" class="c-card c-card--member">
-														<div class="c-card__thumbnail h-bg-cover" style="background-image: url('')"></div>
+														<div class="c-card__thumbnail h-bg-cover h-bgc--darker" style="background-image: url('')"></div>
 														<div class="c-card__content c-card__content--honored-member">
-															<h3 class="c-card__member-title s-color">Từ Phương Như</h3>
-															<div class="c-card__member-group">TSHN1</div>
+															<h3 class="c-card__member-title">Từ Phương Như - TSHN1</h3>
+															<div class="c-card__member-award s-color">Best Sale Doanh số</div>
 														</div>
 													</a>
 												</div>
 												<div class="col-6 col-md-4">
 													<a href="#" class="c-card c-card--member">
-														<div class="c-card__thumbnail h-bg-cover" style="background-image: url('')"></div>
+														<div class="c-card__thumbnail h-bg-cover h-bgc--darker" style="background-image: url('')"></div>
 														<div class="c-card__content c-card__content--honored-member">
-															<h3 class="c-card__member-title s-color">Từ Phương Như</h3>
-															<div class="c-card__member-group">TSHN1</div>
+															<h3 class="c-card__member-title">Từ Phương Như - TSHN1</h3>
+															<div class="c-card__member-award s-color">Best Sale Doanh số</div>
 														</div>
 													</a>
 												</div>
@@ -133,28 +170,18 @@
 								<!-- END Home honor -->
 
 								<!-- Home new member -->
-								<div class="l-home l-home--member">
+								<div id="Section__Home--member" class="l-home l-home--member">
 									<div class="l-home__header h-bgc--gradient-green">
-										<h2 class="l-home__title"><a href="#"><i class="title-icon far fa-"></i>Công dân mới</a></h2>
+										<h2 class="l-home__title"><a href="#"><i class="title-icon fas fa-user-check"></i>Công dân mới</a></h2>
 									</div>
 									<div class="l-home__content">
-										<div class="l-home__content">
-										<div class="l-home__list-honors">
+										<div class="l-home__list-members">
 											<div class="row">
 												<div class="col-6 col-md-4">
 													<a href="#" class="c-card c-card--member">
-														<div class="c-card__thumbnail h-bg-cover" style="background-image: url('')"></div>
+														<div class="c-card__thumbnail h-bg-cover h-bgc--darker" style="background-image: url('')"></div>
 														<div class="c-card__content c-card__content--new-member">
-															<h3 class="c-card__member-title">Từ Phương Như</h3>
-															<div class="c-card__member-group">TSHN1</div>
-														</div>
-													</a>
-												</div>
-												<div class="col-6 col-md-4">
-													<a href="#" class="c-card c-card--member">
-														<div class="c-card__thumbnail h-bg-cover" style="background-image: url('')"></div>
-														<div class="c-card__content c-card__content--new-member">
-															<h3 class="c-card__member-title">Từ Phương Như</h3>
+															<h3 class="c-card__member-title s-color">Từ Phương Như</h3>
 															<div class="c-card__member-group">TSHN1</div>
 														</div>
 													</a>
@@ -162,29 +189,35 @@
 											</div>
 										</div>
 									</div>
+									<div class="l-home__footer">
+										<div class="text-center"><a href="#" class="btn c-button c-button--default-outline px-4">Xem thêm tin tức</a></div>
 									</div>
 								</div>
 								<!-- END Home new member -->
 
 								<!-- Home recruitment -->
-								<div class="l-home l-home-recruitment">
+								<div id="Section__Home--recruitment" class="l-home l-home--recruitment">
 									<div class="l-home__header h-bgc--gradient-light-blue">
-										<h2 class="l-home__title"><a href="#"><i class="title-icon far fa-"></i>Tuyển dụng</a></h2>
+										<h2 class="l-home__title"><a href="#"><i class="title-icon fas fa-users"></i>Tuyển dụng</a></h2>
 									</div>
 									<div class="l-home__content">
-										<div class="l-home__list-news">
+										<div class="l-home__list-news-2">
 											<div class="row">
 												<div class="col-12 col-md-6">
 													<div class="c-card c-card--news-2">
-														<a href="#" class="c-card__thumbnail h-bg-cover" style="background-image: url('');"></a>
+														<a href="#" class="c-card__thumbnail h-bg-cover">
+															<div class="h-rectangle h-rectangle--r21">
+																<div class="h-rectangle__inner h-bg-cover h-bgc--darker" style="background-image: url('');"></div>
+															</div>
+														</a>
 														<div class="c-card__content">
-															<h3 class="c-card__title"><a href="#">News Title</a></h3>
+															<h3 class="c-card__title"><a href="#" class="s-color">News Title</a></h3>
 															<div class="c-card__info">
-																<i class="info-icon fas"></i>
+																<i class="info-icon fas fa-map-marker-alt"></i>
 																<span class="info-data">Hà Nội, TP Hồ Chí Minh</span>
 															</div>
 															<div class="c-card__info">
-																<i class="info-icon fas"></i>
+																<i class="info-icon fas fa-user-tag"></i>
 																<span class="info-data">Tuyển dụng mọi level</span>
 															</div>
 														</div>
@@ -192,63 +225,77 @@
 												</div>
 												<div class="col-12 col-md-6">
 													<div class="c-card c-card--news-2">
-														<a href="#" class="c-card__thumbnail h-bg-cover" style="background-image: url('');"></a>
+														<a href="#" class="c-card__thumbnail h-bg-cover">
+															<div class="h-rectangle h-rectangle--r21">
+																<div class="h-rectangle__inner h-bg-cover h-bgc--darker" style="background-image: url('');"></div>
+															</div>
+														</a>
 														<div class="c-card__content">
-															<h3 class="c-card__title"><a href="#">News Title</a></h3>
+															<h3 class="c-card__title"><a href="#" class="s-color">News Title</a></h3>
 															<div class="c-card__info">
-																<i class="info-icon fas"></i>
+																<i class="info-icon fas fa-map-marker-alt"></i>
 																<span class="info-data">Hà Nội, TP Hồ Chí Minh</span>
 															</div>
 															<div class="c-card__info">
-																<i class="info-icon fas"></i>
+																<i class="info-icon fas fa-user-tag"></i>
 																<span class="info-data">Tuyển dụng mọi level</span>
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
-													
 										</div>
+									</div>
+									<div class="l-home__footer">
+										<div class="text-center"><a href="#" class="btn c-button c-button--default-outline px-4">Xem thêm tin tuyển dụng</a></div>
 									</div>
 								</div>
 								<!-- END Home recruitment -->
 
 								<!-- Home promotion -->
-								<div class="l-home l-home-promotion">
+								<div id="Section__Home--promotion" class="l-home l-home--promotion">
 									<div class="l-home__header h-bgc--gradient-cyan">
-										<h2 class="l-home__title"><a href="#"><i class="title-icon far fa-"></i>Quyết định</a></h2>
+										<h2 class="l-home__title"><a href="#"><i class="title-icon fas fa-edit"></i>Quyết định</a></h2>
 									</div>
 									<div class="l-home__content">
 										<div class="l-home__list-news">
 											<div class="row">
 												<div class="col-12 col-md-6">
 													<div class="c-card c-card--news-2">
-														<a href="#" class="c-card__thumbnail h-bg-cover" style="background-image: url('');"></a>
+														<a href="#" class="c-card__thumbnail h-bg-cover">
+															<div class="h-rectangle h-rectangle--r21">
+																<div class="h-rectangle__inner h-bg-cover h-bgc--darker" style="background-image: url('');"></div>
+															</div>
+														</a>
 														<div class="c-card__content">
-															<h3 class="c-card__title"><a href="#">News Title</a></h3>
+															<h3 class="c-card__title h-fw--700"><a href="#" class="s-color">News Title</a></h3>
 															<div class="c-card__info">
-																<i class="info-icon fas"></i>
+																<i class="info-icon fas fa-map-marker-alt"></i>
 																<span class="info-data">Hà Nội</span>
 															</div>
 															<div class="c-card__info">
-																<i class="info-icon fas"></i>
-																<span class="info-data">Trưởng phòng KV DEV 4</span>
+																<i class="info-icon fas fa-user-tag"></i>
+																<span class="info-data">Trưởng phòng KV DEV 1</span>
 															</div>
 														</div>
 													</div>
 												</div>
 												<div class="col-12 col-md-6">
 													<div class="c-card c-card--news-2">
-														<a href="#" class="c-card__thumbnail h-bg-cover" style="background-image: url('');"></a>
+														<a href="#" class="c-card__thumbnail h-bg-cover">
+															<div class="h-rectangle h-rectangle--r21">
+																<div class="h-rectangle__inner h-bg-cover h-bgc--darker" style="background-image: url('');"></div>
+															</div>
+														</a>
 														<div class="c-card__content">
-															<h3 class="c-card__title"><a href="#">News Title</a></h3>
+															<h3 class="c-card__title h-fw--700"><a href="#" class="s-color">Ms. Nguyễn Thùy Dung</a></h3>
 															<div class="c-card__info">
-																<i class="info-icon fas"></i>
+																<i class="info-icon fas fa-map-marker-alt"></i>
 																<span class="info-data">Hà Nội</span>
 															</div>
 															<div class="c-card__info">
-																<i class="info-icon fas"></i>
-																<span class="info-data">Trưởng phòng KV DEV 4</span>
+																<i class="info-icon fas fa-user-tag"></i>
+																<span class="info-data">Phó phòng Nhân sự</span>
 															</div>
 														</div>
 													</div>
@@ -260,92 +307,124 @@
 								<!-- END Home promotion -->
 
 								<!-- Home policy -->
-								<div class="l-home l-home--policy">
+								<div id="Section__Home--policy" class="l-home l-home--policy">
 									<div class="l-home__header h-bgc--gradient-violet">
-										<h2 class="l-home__title"><a href="#"><i class="title-icon far fa-"></i>Chính sách</a></h2>
+										<h2 class="l-home__title"><a href="#"><i class="title-icon fas fa-check-double"></i>Chính sách</a></h2>
 									</div>
 									<div class="l-home__content">
 										<div class="l-home__list-news l-home__list-news--odds">
 											<div class="c-card c-card--news">
-												<a href="#" class="c-card__thumbnail h-bg-cover" style="background-image: url('');"></a>
+												<a href="#" class="c-card__thumbnail h-bg-cover">
+													<div class="h-rectangle h-rectangle--r32">
+														<div class="h-rectangle__inner h-bg-cover h-bgc--darker" style="background-image: url('');"></div>
+													</div>
+												</a>
 												<div class="c-card__content">
-													<h3 class="c-card__title"><a href="#">News Title</a></h3>
-													<div class="c-card__excerpt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis.
-														<a href="#">Xem thêm</a>
+													<h3 class="c-card__title"><a href="#" class="s-color">Với Ole Gunnar Solskjaer, MU có một huấn luyện viên thấu hiểu đội bóng</a></h3>
+													<div class="c-card__excerpt">Jose Mourinho có một tình yêu với MU, nhưng chưa bao giờ hiểu được đội bóng này tường tận. Còn Solskjaer lại khác. Năm 1999, khoảnh khắc cựu sao người NaUy trượt dài ăn mừng trên thảm cỏ Nou Camp trở thành một trong những khoảnh khắc đáng nhớ nhất của "Sát thủ mang gương mặt trẻ thơ".
+														<a href="#" class="s-color see-more see-more--news">Xem thêm</a>
 													</div>
 												</div>
 											</div>
 											<div class="c-card c-card--news">
-												<a href="#" class="c-card__thumbnail h-bg-cover" style="background-image: url('');"></a>
+												<a href="#" class="c-card__thumbnail h-bg-cover">
+													<div class="h-rectangle h-rectangle--r32">
+														<div class="h-rectangle__inner h-bg-cover h-bgc--darker" style="background-image: url('');"></div>
+													</div>
+												</a>
 												<div class="c-card__content">
-													<h3 class="c-card__title"><a href="#">News Title</a></h3>
-													<div class="c-card__excerpt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis.
-														<a href="#">Xem thêm</a>
+													<h3 class="c-card__title"><a href="#" class="s-color">Con người hòa nhã, lịch thiệp và cứng rắn</a></h3>
+													<div class="c-card__excerpt">Mọi thứ bắt đầu từ ấy. Solskjaer luôn khao khát gắn bó với MU, trên cương vị cầu thủ lẫn HLV. Ông không ngừng học hỏi Sir Alex Ferguson vĩ đại.
+														<a href="#" class="s-color see-more see-more--news">Xem thêm</a>
 													</div>
 												</div>
 											</div>
 										</div>
+									</div>
+									<div class="l-home__footer">
+										<div class="text-center"><a href="#" class="btn c-button c-button--default-outline px-4">Xem thêm các chính sách</a></div>
 									</div>
 								</div>
 								<!-- END Home policy -->
 
 								<!-- Home activity -->
-								<div class="l-home l-home--policy">
+								<div id="Section__Home--activity" class="l-home l-home--activity">
 									<div class="l-home__header h-bgc--gradient-light-violet">
-										<h2 class="l-home__title"><a href="#"><i class="title-icon far fa-"></i>Hoạt động</a></h2>
+										<h2 class="l-home__title"><a href="#"><i class="title-icon fas fa-running"></i>Hoạt động</a></h2>
 									</div>
 									<div class="l-home__content">
 										<div class="l-home__list-news l-home__list-news--odds">
 											<div class="c-card c-card--news">
-												<a href="#" class="c-card__thumbnail h-bg-cover" style="background-image: url('');"></a>
+												<a href="#" class="c-card__thumbnail h-bg-cover">
+													<div class="h-rectangle h-rectangle--r32">
+														<div class="h-rectangle__inner h-bg-cover h-bgc--darker" style="background-image: url('');"></div>
+													</div>
+												</a>
 												<div class="c-card__content">
-													<h3 class="c-card__title"><a href="#">News Title</a></h3>
-													<div class="c-card__excerpt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis.
-														<a href="#">Xem thêm</a>
+													<h3 class="c-card__title"><a href="#" class="s-color">Với Ole Gunnar Solskjaer, MU có một huấn luyện viên thấu hiểu đội bóng</a></h3>
+													<div class="c-card__excerpt">Jose Mourinho có một tình yêu với MU, nhưng chưa bao giờ hiểu được đội bóng này tường tận. Còn Solskjaer lại khác. Năm 1999, khoảnh khắc cựu sao người NaUy trượt dài ăn mừng trên thảm cỏ Nou Camp trở thành một trong những khoảnh khắc đáng nhớ nhất của "Sát thủ mang gương mặt trẻ thơ".
+														<a href="#" class="s-color see-more see-more--news">Xem thêm</a>
 													</div>
 												</div>
 											</div>
 											<div class="c-card c-card--news">
-												<a href="#" class="c-card__thumbnail h-bg-cover" style="background-image: url('');"></a>
+												<a href="#" class="c-card__thumbnail h-bg-cover">
+													<div class="h-rectangle h-rectangle--r32">
+														<div class="h-rectangle__inner h-bg-cover h-bgc--darker" style="background-image: url('');"></div>
+													</div>
+												</a>
 												<div class="c-card__content">
-													<h3 class="c-card__title"><a href="#">News Title</a></h3>
-													<div class="c-card__excerpt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis.
-														<a href="#">Xem thêm</a>
+													<h3 class="c-card__title"><a href="#" class="s-color">Con người hòa nhã, lịch thiệp và cứng rắn</a></h3>
+													<div class="c-card__excerpt">Mọi thứ bắt đầu từ ấy. Solskjaer luôn khao khát gắn bó với MU, trên cương vị cầu thủ lẫn HLV. Ông không ngừng học hỏi Sir Alex Ferguson vĩ đại.
+														<a href="#" class="s-color see-more see-more--news">Xem thêm</a>
 													</div>
 												</div>
 											</div>
 										</div>
+									</div>
+									<div class="l-home__footer">
+										<div class="text-center"><a href="#" class="btn c-button c-button--default-outline px-4">Xem thêm hoạt động</a></div>
 									</div>
 								</div>
 								<!-- END Home activity -->
 
 								<!-- Home entertainment -->
-								<div class="l-home l-home--policy">
+								<div id="Section__Home--entertainment" class="l-home l-home--entertainment">
 									<div class="l-home__header h-bgc--gradient-orange">
 										<h2 class="l-home__title"><a href="#"><i class="title-icon far fa-laugh"></i>Giải trí</a></h2>
 									</div>
 									<div class="l-home__content">
-										<div class="l-home__list-news l-home__list-news--odds">
-											<div class="c-card c-card--news">
-												<a href="#" class="c-card__thumbnail h-bg-cover" style="background-image: url('');"></a>
-												<div class="c-card__content">
-													<h3 class="c-card__title"><a href="#">News Title</a></h3>
-													<div class="c-card__excerpt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis.
-														<a href="#">Xem thêm</a>
+										<div class="l-home__list-news">
+											<div class="c-card c-card--news c-card--entertainment">
+												<a href="#" class="c-card__thumbnail c-card__thumbnail--sm h-bg-cover">
+													<div class="h-rectangle h-rectangle--r32">
+														<div class="h-rectangle__inner h-bg-cover h-bgc--darker" style="background-image: url('');"></div>
 													</div>
-
+												</a>
+												<div class="c-card__content">
+													<h3 class="c-card__title"><a href="#" class="s-color">Citigo có một huấn luyện viên thấu hiểu đội bóng</a></h3>
+													<div class="c-card__excerpt">Khoảnh khắc cựu sao người NaUy trượt dài ăn mừng trên thảm cỏ Nou Camp trở thành một trong những khoảnh khắc đáng nhớ nhất của "Sát thủ mang gương mặt trẻ thơ".
+														<a href="#" class="s-color see-more see-more--news">Xem thêm</a>
+													</div>
 												</div>
 											</div>
 											<div class="c-card c-card--news">
-												<a href="#" class="c-card__thumbnail h-bg-cover" style="background-image: url('');"></a>
+												<a href="#" class="c-card__thumbnail c-card__thumbnail--sm h-bg-cover">
+													<div class="h-rectangle h-rectangle--r32">
+														<div class="h-rectangle__inner h-bg-cover h-bgc--darker" style="background-image: url('');"></div>
+													</div>
+												</a>
 												<div class="c-card__content">
-													<h3 class="c-card__title"><a href="#">News Title</a></h3>
-													<div class="c-card__excerpt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis.
-														<a href="#">Xem thêm</a>
+													<h3 class="c-card__title"><a href="#" class="s-color">VTiền vệ Chanathip giành Quả bóng vàng Citigo 2018</a></h3>
+													<div class="c-card__excerpt">Sau quãng thời gian tỏa sáng tại giải vô địch Citigo, tiền vệ Chanathip Songkrasin được vinh danh ở hạng mục cầu thủ hay nhất năm 2018.
+														<a href="#" class="s-color see-more see-more--news">Xem thêm</a>
 													</div>
 												</div>
 											</div>
 										</div>
+									</div>
+									<div class="l-home__footer">
+										<div class="text-center"><a href="#" class="btn c-button c-button--default-outline px-4">Xem thêm</a></div>
 									</div>
 								</div>
 								<!-- END Home entertainment -->
@@ -359,7 +438,10 @@
 		</div>
 		<footer id="SiteFooter" class="l-footer text-center">
 			<div class="container">
-				<div class="l-footer__copyright">© 2018 Citigo VietNam. All Right Reserved</div>
+				<div class="l-footer__content">
+					<div class="l-footer__logo"><a href="http://www.citigo.com.vn/" target="_blank"><img src="assets/img/logo.png"></a></div>
+					<div class="l-footer__copyright">©2019 Citigo VietNam. All Right Reserved</div>
+				</div>
 			</div>
 			
 		</footer>

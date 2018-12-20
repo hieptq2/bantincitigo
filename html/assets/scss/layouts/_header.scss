@@ -11,18 +11,99 @@
 			//
 		}
 	}
-	.header-nav{
-		position: sticky;
-		position: -webkit-sticky;
-		top: 1rem;
-		&__logo{
-			margin: 0;
-			.logo{
-				a{
-					display: block;
+	@include viewport-max(lg){
+		// display: none;
+		position: fixed;
+		top: 48px; left: 0;
+		z-index: 1010;
+		background-color: #fff;
+		box-shadow: 0 2px 5px 0 rgba(#000,.12);
+	}
+	.header-toggle{
+		@extend %button-reset;
+		@extend %no-outline;
+		display: block;
+		position: absolute;
+		z-index: 1020;
+		top: -48px; left: 0;
+		width: 48px;
+		height: 48px;
+		line-height: 48px;
+		font-size: 18px;
+		color: #fff;
+		background-color: set-color('secondary');
+		text-align: center;
+		cursor: pointer;
+		@include transition(all .2s ease-in-out);
+		@include viewport-min(lg){
+			display: none;
+		}
+		.toggle-icon{
+			display: block;
+			position: absolute;
+			width: 24px;
+			height: 22px;
+			top: 50%; margin-top: -11px;
+			left: 50%; margin-left: -12px;
+			span{
+				display: block;
+				position: absolute;
+				width: 24px;
+				height: 2px;
+				background-color: #fff;
+				@include transition(all .2s ease-in-out);
+				@include transform-origin(0 50%);
+				&:nth-child(1){ top: 50%; left: 0; margin-top: -9px; }
+				&:nth-child(2){ top: 50%; left: 0; margin-top: -1px; }
+				&:nth-child(3){ top: 50%; left: 0; margin-top: 7px; }
+			}
+			
+		}
+		&.is-actived{
+			background-color: $grey500;
+			span{
+				&:nth-child(1){
+					// width: 31px;
+					margin-top: -1px;
+					@include rotate(-45deg);
 				}
+				&:nth-child(2){
+					opacity: 0;
+				}
+				&:nth-child(3){
+					margin-top: -1px;
+					@include rotate(45deg);
+				}
+			}
+		}
+	}
+	.header-nav{
+		@include transition(max-height .8s map-get($g-easing, 'ease-in-out-quart'));
+		@include viewport-max(lg){
+			overflow-y: hidden;
+			max-height: 0;
+			&.is-actived{
+				max-height: calc(100vh - 48px);
+			}
+		}
+		@include viewport-min(lg){
+			position: sticky;
+			position: -webkit-sticky;
+			top: 0;
+		}
+		&__logo{
+			margin: 0 1rem;
+			padding: 1rem 0;
+			@include viewport-min(lg){
+				margin: 0;
+			}
+			a{
+				display: block;
+			}
+			.logo{
 				&-image{
-					//
+					display: block;
+					max-width: 100%;
 				}
 				&-title{
 					@extend %visually-hidden;
@@ -30,15 +111,18 @@
 			}
 		}
 		&__list{
-			margin-top: 2rem;
-			padding-top: 2rem;
+			margin: 0 1rem;
+			padding: 1rem 0;
 			border-top: 1px solid set-color('divider');
+			@include viewport-min(lg){
+				margin: 0;
+			}
 			li{
-				margin: 0 -.75rem;
+				margin: 0 -.5rem;
 				a{
 					display: block;
 					position: relative;
-					padding: .5rem 2.5rem .5rem .75rem;
+					padding: .5rem 2.5rem .5rem .5rem;
 					font-size: set-font('size');
 					font-weight: set-font('weight', 'bold');
 					text-transform: uppercase;

@@ -225,6 +225,12 @@
 	}
 }
 
+.h-h-udl{
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
 .h-bdrd--base{
 	border-radius: $g-bdrd;
 }

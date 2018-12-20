@@ -38,6 +38,7 @@
       'footer':         'modules/footer',
 
       'components':     'modules/components',
+      'home':           'modules/home',
     },
 
     shim:{
@@ -64,6 +65,10 @@
       'components':{
         deps: ['jquery', 'bootstrap', 'easing']
       },
+      'home':{
+        deps: ['jquery', 'bootstrap', 'easing']
+      },
+      
       
     }
   });
@@ -84,7 +89,7 @@
 
     // Page specific module
     var currentModule = $('#SiteContent').attr('data-js-module');
-    var listModules = ['components'];
+    var listModules = ['components', 'home'];
 
     if (currentModule && $.inArray(currentModule, listModules) !== -1) {
       require([currentModule], function (currentModule) {

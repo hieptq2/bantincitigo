@@ -2,27 +2,79 @@
    LAYOUT -> home
    ========================================================================= */
 
+.l-cover{
+	@include viewport-max(sm){
+		margin: 0 -16px;
+	}
+	&__control{
+		display: block;
+		position: absolute;
+		top: 0; bottom: 0;
+		text-align: center;
+		width: 48px;
+		color: rgba(#fff, .8);
+		text-shadow: 0 1px 5px rgba(#000, .2);
+		@include viewport-min(md){
+			width: 72px;
+		}
+		i{
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 0; right: 0;
+			font-size: 24px;
+			line-height: 40px;
+			margin-top: -20px;
+			text-align: center;
+		}
+		&:hover{
+			color: #fff;
+		}
+		&:active{
+			color: #fff;
+			opacity: .8;
+		}
+		&--prev{
+			left: 0;
+		}
+		&--next{
+			right: 0;
+		}
+	}
+}
 
 .l-home{
-	margin: 0 0 3rem;
-	&:last-child{
-		margin: 0;
-	}
+	$self: &;
+	margin: 0 0 2rem;
+	// &:last-child{
+	// 	margin: 0;
+	// }
 	&__header{
 		text-align: center;
 		background-color: $grey300;
+		@include transition(opacity .1s ease-in-out);
+		&:hover{
+			opacity: .9;
+		}
 	}
 	&__title{
 		margin: 0;
-		padding: 1.25rem 1rem;
 		line-height: 1.25;
-		font-size: 2rem;
+		font-size: 1.5rem;
 		font-weight: 600;
 		color: #fff;
 		letter-spacing: 1px;
+		@include viewport-min(md){
+			font-size: 2rem;
+		}
 		a{
 			display: block;
+			position: relative;
 			color: #fff;
+			padding: 1rem 1rem;
+			@include viewport-min(md){
+				padding: 1.25rem 1rem;
+			}
 		}
 		.title{
 			&-icon{
@@ -34,23 +86,14 @@
 	}
 
 	&__content{
-		padding: 1rem 2rem;
+		padding: 1rem;
+		@include viewport-min(md){
+			padding: 2rem;
+		}
 	}
 	&__footer{
-		padding: 1rem 2rem;
-	}
-
-	&--news{
-		$s-color: nth(map-get($gradients, 'blue'), 1);
-		.s-color{ color: $s-color; }
-	}
-	&--honor{
-		$s-color: nth(map-get($gradients, 'yellow'), 1);
-		.s-color{ color: $s-color; }
-	}
-	&--member{
-		$s-color: nth(map-get($gradients, 'green'), 1);
-		.s-color{ color: $s-color; }
+		margin: 1rem 0 0;
+		padding: 1rem 1rem;
 	}
 
 	&__list-news{
@@ -58,14 +101,25 @@
 			.c-card{
 				$self: '.c-card';
 				&--news{
-					&:nth-child(2n){
-						flex-direction: row-reverse;
-						#{$self}__thumbnail{
-							margin: 0 0 0 1.5rem;
+					@include viewport-min(md){
+						&:nth-child(2n){
+							flex-direction: row-reverse;
+							#{$self}__thumbnail{
+								margin: 0 0 0 1.5rem;
+							}
 						}
 					}
 				}
 			}
 		}
+	}
+	&__list-honors{
+		//
+	}
+	&__list-members{
+		//
+	}
+	&__list-news-2{
+		margin: 0 -.5rem;
 	}
 }

@@ -3,6 +3,9 @@
    ========================================================================= */
 
 
-.l-grid{
-	//
+.container{
+	@include viewport-max(sm){
+		padding-left: 16px;
+		padding-right: 16px;
+	}
 }
