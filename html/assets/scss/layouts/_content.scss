@@ -5,7 +5,7 @@
 
 .l-content{
 	$self: &;
-
+	min-height: calc(100vh - 180px - 16px);
 	&--404{
 		#{$self}__title{
 			font-size: 4rem;
@@ -15,15 +15,6 @@
 			color: set-color('text', 'sub');
 		}
 	}
-
-	&--category{
-		#{$self}__wrapper{
-			padding: 1rem;
-			@include viewport-min(md){
-				padding: 2rem;
-			}
-		}
-	}
 	.c-breadcrumb{
 		margin: 0 0 2rem;
 		padding: 0 0 1rem;
@@ -31,6 +22,8 @@
 	}
 	&__header{
 		margin: 0 0 2rem;
+		padding: 0 0 2rem;
+		border-bottom: 1px solid set-color('divider');
 	}
 	&__title{
 		margin: 0 0 .5rem;
@@ -43,6 +36,35 @@
 
 	&__footer{
 		margin-top: 4rem;
+	}
+
+	&--category{
+		#{$self}__wrapper{
+			padding: 1rem;
+			@include viewport-min(md){
+				padding: 2rem;
+			}
+		}
+	}
+	&--single{
+		#{$self}__wrapper{
+			padding: 1rem;
+			@include viewport-min(md){
+				padding: 2rem;
+			}
+		}
+		#{$self}__footer{
+			padding: 2rem 0 0;
+			border-top: 1px solid set-color('divider');
+		}
+	}
+	&--archive{
+		#{$self}__wrapper{
+			padding: 1rem;
+			@include viewport-min(md){
+				padding: 2rem;
+			}
+		}
 	}
 }
 

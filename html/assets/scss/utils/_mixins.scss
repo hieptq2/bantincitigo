@@ -71,7 +71,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: $lines-to-show * $line-height;
+  max-height: $lines-to-show * $line-height;
   @if ($height){
   	height: $lines-to-show * $line-height;
   }

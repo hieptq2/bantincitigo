@@ -5,7 +5,28 @@
 
 .c-list{
 	$self: &;
+	display: block;
 	&--reset{
 		@extend %list-reset;
+	}
+	&--h-s-avatars{
+		display: flex;
+		margin: 0 0 0 -2px;
+		padding: 0 128px 0 0;
+		#{$self}__item{
+			flex: 0 0 64px;
+			min-width: 0;
+			.h-rectangle{
+				width: 96px;
+				&__inner{
+					border: 2px solid #fff;
+				}
+			}
+			@for $i from 1 to 20{
+				&:nth-child(#{$i}){
+					z-index: 100 - $i * 2;
+				}
+			}
+		}
 	}
 }
