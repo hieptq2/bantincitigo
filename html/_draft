@@ -26,10 +26,62 @@ component
 
 
 news: news
-honor
+honors
 member
 recruitment
 promotion
 policy
 activity
 entertainment
+
+
+--------
+
+Custom Post Type
+- Slider
+		image: 16x9
+		link
+		open in: newtab or current page
+
+- Member: thành viên
+		title (fullname + department )
+		fullname: Họ tên
+		title: Chức danh / Vị trí
+		department: Phòng ban
+		Additional Information
+		hometown: Đến từ
+		about: Giới thiệu bản thân
+		phone: 
+		facebook: 
+		skype: 
+
+- Honor Members
+		winner: Cá nhân được vinh danh
+		reviewer: Người đánh giá
+		interview: Nhận xét / Phỏng vấn
+
+- New Members
+		member
+
+- recruitment
+		title
+		location
+		level
+		editor
+
+- promotion
+		title
+		new role
+		new department
+		location
+		editor
+- policy
+		title
+		editor
+- activity
+		title
+		editor
+- entertainment
+		title
+		editor
+		

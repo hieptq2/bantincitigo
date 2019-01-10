@@ -1,0 +1,37 @@
+/* ============================================================================
+   COMPONENTS -> breadcrumb
+   ========================================================================= */
+
+
+.c-breadcrumb{
+	@extend %list-reset;
+	font-size: 0;
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		line-height: 16px;
+		font-size: set-font('size', 'xs');
+		color: $grey400;
+		& + &{
+			&:before{
+				content: "/";
+				display: inline-block;
+				vertical-align: top;
+				line-height: 16px;
+				padding: 0 .625rem;
+				font-size: set-font('size', 'xxs');
+				color: $grey300;
+			}
+		}
+		a{
+			display: inline-block;
+			line-height: 16px;
+			vertical-align: top;
+			font-size: set-font('size', 'xs');
+			color: set-color('text', 'sub');
+			&:hover{
+				color: set-color('primary');
+			}
+		}
+	}
+}

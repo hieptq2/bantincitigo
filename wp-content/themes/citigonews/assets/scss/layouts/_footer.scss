@@ -1,0 +1,36 @@
+/* ============================================================================
+   LAYOUT -> footer
+   ========================================================================= */
+
+
+.l-footer{
+	margin: 4rem 0 0;
+	&__content{
+		padding: 1rem 0;
+		font-size: set-font('size', 'xs');
+		border-top: 1px solid set-color('divider');
+	}
+	&__logo{
+		a{
+			display: inline-block;
+			vertical-align: top;
+			padding: .5rem 1rem;
+		}
+		img{
+			display: inline-block;
+			vertical-align: top;
+			height: 40px;
+			filter: grayscale(1);
+			opacity: .6;
+			@include transition(filter .2s ease-in-out, opacity .2s ease-in-out);
+			&:hover{
+				filter: grayscale(0);
+				opacity: 1;
+			}
+		}
+	}
+	&__copyright{
+		margin: .5rem 0 0;
+		color: $grey500;
+	}
+}

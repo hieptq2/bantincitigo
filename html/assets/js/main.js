@@ -89,7 +89,7 @@
 
     // Page specific module
     var currentModule = $('#SiteContent').attr('data-js-module');
-    var listModules = ['components', 'home'];
+    var listModules = ['components', 'home', '[page]'];
 
     if (currentModule && $.inArray(currentModule, listModules) !== -1) {
       require([currentModule], function (currentModule) {

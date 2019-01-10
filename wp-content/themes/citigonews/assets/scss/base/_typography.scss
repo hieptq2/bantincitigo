@@ -1,0 +1,67 @@
+/* ============================================================================
+   BASE -> typography
+   ========================================================================= */
+
+// base
+
+body{
+	line-height: $g-line-height;
+	font-family: set-font('family');
+	font-size: set-font('size');
+	font-weight: set-font('weight');
+}
+
+
+// heading
+
+@for $i from 1 through 6 {
+	h#{$i}, .h#{$i}{
+		font-size: 			nth(map-get($g-heading, 'font-size'), $i);
+		font-weight: 		map-get($g-heading, 'font-weight');
+		line-height: 		nth(map-get($g-heading, 'line-height'), $i);
+		margin-bottom: 	nth(map-get($g-heading, 'margin-bottom'), $i);
+	}
+}
+
+
+// link
+
+a{
+	color: map-get($g-link, 'color');
+	text-decoration: map-get($g-link, 'decoration');
+	@include transition(color .1s ease-in-out, 
+											background-color .1s ease-in-out, 
+											border-color .1s ease-in-out,
+											opacity .1s ease-in-out);
+	&:hover,
+	&:focus,
+	&:visited,
+	&:active{
+		// color: map-get($g-link, 'color');
+	}
+	&:hover{
+		color: map-get($g-link, 'color--on-hover');
+		text-decoration: map-get($g-link, 'decoration--on-hover');
+	}
+}
+
+
+// bold
+
+b{
+	font-weight: 700;
+}
+
+
+// hr
+
+hr{
+	border-color: set-color('divider');
+}
+
+mark, 
+.mark{
+	padding-left: .375rem;
+	padding-right: .375rem;
+	background-color: lighten(set-color('primary'), 40%);
+}

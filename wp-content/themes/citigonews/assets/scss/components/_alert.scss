@@ -1,0 +1,33 @@
+/* ============================================================================
+   COMPONENTS -> alert
+   ========================================================================= */
+
+
+.c-alert{
+	border-color: transparent;
+	min-height: 1.75rem;
+	&.alert-success{
+
+	}
+	&.alert-dismissible{
+		position: relative;
+		padding-right: 2.25rem;
+		.c-close{
+			@extend %button-reset;
+			@extend %no-outline;
+			position: absolute;
+			top: 0; right: 0;
+			width: 1.75rem;
+			height: 1.75rem;
+			line-height: 1.75rem;
+			font-size: 1rem;
+			text-align: center;
+			color: $grey400;
+			cursor: pointer;
+			@include transition(color .1s ease-in-out);
+			&:hover{
+				color: $grey600;
+			}
+		}
+	}
+}

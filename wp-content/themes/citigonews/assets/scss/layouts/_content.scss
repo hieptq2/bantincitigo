@@ -1,0 +1,108 @@
+/* ============================================================================
+   LAYOUT -> content
+   ========================================================================= */
+
+
+.l-content{
+	$self: &;
+	min-height: calc(100vh - 180px - 16px);
+	&--404{
+		#{$self}__title{
+			font-size: 4rem;
+			font-weight: 800;
+		}
+		#{$self}__subtitle{
+			color: set-color('text', 'sub');
+		}
+	}
+	.c-breadcrumb{
+		margin: 0 0 2rem;
+		padding: 0 0 1rem;
+		border-bottom: 1px solid set-color('divider');
+	}
+	&__header{
+		margin: 0 0 2rem;
+		padding: 0 0 2rem;
+		border-bottom: 1px solid set-color('divider');
+	}
+	&__title{
+		margin: 0 0 .5rem;
+		font-size: 2rem;
+		font-weight: 700;
+	}
+	&__subtitle{
+		color: set-color('text', 'sub');
+	}
+
+	&__footer{
+		margin-top: 4rem;
+	}
+
+	&--category{
+		#{$self}__wrapper{
+			padding: 1rem;
+			@include viewport-min(md){
+				padding: 2rem;
+			}
+		}
+	}
+	&--single{
+		#{$self}__wrapper{
+			padding: 1rem;
+			@include viewport-min(md){
+				padding: 2rem;
+			}
+		}
+		#{$self}__footer{
+			padding: 2rem 0 0;
+			border-top: 1px solid set-color('divider');
+		}
+	}
+	&--archive{
+		#{$self}__wrapper{
+			padding: 1rem;
+			@include viewport-min(md){
+				padding: 2rem;
+			}
+		}
+	}
+}
+
+
+// Theme colors
+
+.l-home,
+.l-content{
+	&--news{
+		$s-color: nth(map-get($gradients, 'blue'), 1);
+		.s-color{ color: $s-color; }
+	}
+	&--honor{
+		$s-color: darken(nth(map-get($gradients, 'yellow'), 1), 5%);
+		.s-color{ color: $s-color; }
+	}
+	&--member{
+		$s-color: nth(map-get($gradients, 'green'), 1);
+		.s-color{ color: $s-color; }
+	}
+	&--recruitment{
+		$s-color: nth(map-get($gradients, 'light-blue'), 1);
+		.s-color{ color: $s-color; }
+	}
+	&--promotion{
+		$s-color: nth(map-get($gradients, 'cyan'), 1);
+		.s-color{ color: $s-color; }
+	}
+	&--policy{
+		$s-color: nth(map-get($gradients, 'violet'), 1);
+		.s-color{ color: $s-color; }
+	}
+	&--activity{
+		$s-color: nth(map-get($gradients, 'light-violet'), 1);
+		.s-color{ color: $s-color; }
+	}
+	&--entertainment{
+		$s-color: nth(map-get($gradients, 'orange'), 1);
+		.s-color{ color: $s-color; }
+	}
+}

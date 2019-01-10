@@ -1,0 +1,32 @@
+/* ============================================================================
+   PAGES -> page
+   ========================================================================= */
+
+
+.p-page{
+	&__wrapper{
+		.l-body{
+			background-color: #fff;
+		}
+		.l-content{
+			background-color: #fff;
+		}
+		@include viewport-min(lg){
+			display: flex;
+			// align-items: baseline;
+			.l-header{
+				flex: 0 0 auto;
+				min-width: 0;
+				margin: 0 2rem 1rem 0;
+			}
+			.l-body{
+				flex: 1 1 auto;
+				min-width: 0;
+				margin: 0 0 1rem;
+			}
+			.l-content{
+				background-color: #fff;
+			}
+		}
+	}
+}

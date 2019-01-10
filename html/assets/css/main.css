@@ -1637,6 +1637,41 @@ mark,
   text-overflow: ellipsis;
   max-height: 2.625rem;
 }
+.c-card--interview {
+  padding: 0;
+}
+.c-card--interview .interview-ee {
+  margin: 2rem 0 0;
+  padding: 1rem 0 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.c-person {
+  display: flex;
+  align-items: center;
+}
+.c-person__avatar {
+  flex: 0 0 auto;
+  margin: 0 1rem 0 0;
+  width: 72px;
+  height: 72px;
+  background: #ccc;
+  border-radius: 50%;
+}
+.c-person__content {
+  flex: 1 1 auto;
+  margin: 0;
+}
+.c-person__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.c-person__subtitle {
+  margin: 4px 0;
+  font-size: .75rem;
+  font-weight: 400;
+  color: #757575;
+}
 
 /* ============================================================================
    COMPONENTS -> collapse
@@ -1972,6 +2007,8 @@ mark,
   display: flex;
   margin: 0 0 0 -2px;
   padding: 0 128px 0 0;
+  max-width: 100%;
+  overflow: hidden;
 }
 .c-list--h-s-avatars .c-list__item {
   flex: 0 0 64px;
@@ -2148,6 +2185,17 @@ mark,
 .c-post__meta .single-meta i[class^="fa"] {
   color: #9e9e9e;
   margin: 0 6px 0 0;
+}
+.c-post__single-person {
+  margin: 2rem 0;
+  padding: 16px;
+  background-color: #fafafa;
+  border: 2px dashed rgba(0, 0, 0, 0.08);
+}
+.c-post__single-person .c-card {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
 }
 
 /* ============================================================================

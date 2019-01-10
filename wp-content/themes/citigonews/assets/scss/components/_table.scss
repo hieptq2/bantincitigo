@@ -1,0 +1,25 @@
+/* ============================================================================
+   COMPONENTS -> table
+   ========================================================================= */
+
+
+.c-table{
+	th,
+  td {
+    border-top-color: set-color('table', 'border');
+  }
+  thead th {
+    border-bottom-color: set-color('table', 'border');
+  }
+  tbody + tbody {
+    border-top-color: set-color('table', 'border');
+  }
+	&.table-bordered {
+	  border-color: set-color('table', 'border');
+	  th,
+	  td {
+	    border-color: set-color('table', 'border');
+	  }
+	}
+}
+

@@ -1,0 +1,241 @@
+/* ============================================================================
+   UTILS -> helpers
+   ========================================================================= */
+
+
+// clear
+
+.h-clearfix{
+	@extend %clearfix;
+}
+
+
+// background
+
+.h-bg-cover{
+	@extend %bg-cover;
+}
+.h-bg-contain{
+	@extend %bg-contain;
+}
+
+
+// size
+
+.h-fullsize{
+	@extend %fullsize;
+}
+
+
+// colors
+
+.h-c-primary{
+	color: set-color('primary') !important;
+}
+.h-c-secondary{
+	color: set-color('secondary') !important;
+}
+.h-bgc-primary{
+	background-color: set-color('primary') !important;
+}
+.h-bgc-secondary{
+	background-color: set-color('secondary') !important;
+}
+
+.h-c-text{
+	color: set-color('text') !important;
+}
+.h-c-text--sub{
+	color: set-color('text', 'sub') !important;
+}
+.h-c-text--disabled{
+	color: set-color('text', 'disabled') !important;
+}
+
+.h-bgc{
+	background-color: set-color('background');
+}
+.h-bgc--lighter{
+	background-color: set-color('background', 'lighter');
+}
+.h-bgc--darker{
+	background-color: set-color('background', 'darker');
+}
+.h-bgc--dark{
+	background-color: set-color('background', 'dark');
+}
+
+.h-c-white{
+	color: #fff !important;
+}
+.h-bgc-white{
+	background-color: #fff !important;
+}
+.h-c-black{
+	color: #000 !important;
+}
+.h-bgc-black{
+	background-color: #000 !important;
+}
+
+@each $color, $range in $gradients{
+	.h-bgc--gradient-#{$color}{
+		@include background-image(linear-gradient(to center right, nth($range, 1), nth($range, 2)));
+	}
+}
+
+// shadow
+
+.h-shadow-1{
+	box-shadow: 0 1px 3px 0 rgba(#000,.08);
+}
+.h-shadow-2{
+	box-shadow: 0 2px 5px 0 rgba(#000,.12);
+}
+.h-shadow-3{
+	box-shadow: 0 3px 8px 0 rgba(#000,.16);
+}
+.h-shadow-4{
+	box-shadow: 0 4px 10px 0 rgba(#000,.2);
+}
+
+
+// rectangle
+
+.h-rectangle{
+	position: relative;
+	display: block;
+	&:after {
+	  content: "";
+	  display: block;
+	  padding-bottom: 100%;
+	}
+	&__inner{
+  	display: block;
+		position: absolute;
+  	top: 0; left: 0; right: 0; bottom: 0;
+	}
+	&--r11{ 	&:after { padding-bottom: 100%; } }
+	&--r31{ 	&:after { padding-bottom: 33.3333%; } }
+	&--r13{ 	&:after { padding-bottom: 300%; } }
+	&--r32{ 	&:after { padding-bottom: 66.6666%; } }
+	&--r23{ 	&:after {	padding-bottom: 150%; } }
+	&--r21{ 	&:after {	padding-bottom: 50%; } }
+	&--r12{ 	&:after { padding-bottom: 200%; } }
+	&--r169{ 	&:after { padding-bottom: 56.25%; } }
+	&--r916{ 	&:after { padding-bottom: 178%; } }
+}
+
+
+// image
+
+.h-img-fit{
+	display: block;
+	text-align: center;
+	white-space: nowrap;
+	&:after{
+		content:"";
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%;
+	}
+	img{
+		display: inline-block;
+		vertical-align: middle;
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+.h-img-cover{
+	@extend %img-cover;
+}
+
+
+// text
+
+.h-text-oneline{
+	@include one-line-ellipsis();
+}
+
+@each $label, $size in map-get($g-fonts, 'size'){
+	.h-fz--#{$label}{
+		font-size: $size !important;
+	}
+}
+@for $i from 3 through 8{
+	.h-fw--#{$i * 100}{
+		font-weight: $i * 100 !important;
+	}
+}
+.h-fs--normal{
+	font-style: normal !important;
+}
+.h-fs--italic{
+	font-style: italic !important;
+}
+
+.h-title{
+	margin: 0;
+	line-height: 1.25;
+	font-size: 1.75rem;
+	font-weight: set-font('weight', 'medium');
+	&--sm{
+		line-height: 1.375;
+		font-size: 1.75rem;
+	}
+}
+.h-headline{
+	margin: 0;
+	line-height: 1.25;
+	font-size: 1.25rem;
+	font-weight: set-font('weight', 'bold');
+	&--sm{
+		line-height: 1.5;
+		font-size: 1rem;
+	}
+}
+.h-caption{
+	margin: 0;
+	line-height: 1.5;
+	font-size: set-font('size', 'sm');
+	color: set-color('text', 'sub');
+	&--sm{
+		font-size: set-font('size', 'xs');
+	}
+}
+
+
+
+// form
+
+.h-resize-none{
+	resize: none;
+}
+
+
+// custom
+
+.h-outline-none{
+	&,
+	&:hover,
+	&:active,
+	&:focus,
+	&:visited{
+		outline: none;
+	}
+}
+
+.h-h-udl{
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+.h-bdrd--base{
+	border-radius: $g-bdrd;
+}
+.h-bdrd--circle{
+	border-radius: 50%;
+}
+
+

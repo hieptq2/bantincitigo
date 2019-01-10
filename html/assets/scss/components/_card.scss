@@ -322,4 +322,43 @@
 			@include multi-line-ellipsis(.875rem * 1.5, 2);
 		}
 	}
+	&--interview{
+		padding: 0;
+		.interview{
+			&-convo{
+				//
+			}
+			&-ee{
+				margin: 2rem 0 0;
+				padding: 1rem 0 0;
+				border-top: 1px solid rgba(#000, .08);
+			}
+		}
+	}
+}
+.c-person{
+	display: flex;
+	align-items: center;
+	&__avatar{
+		flex: 0 0 auto;
+		margin: 0 1rem 0 0;
+		width: 72px;
+		height: 72px;
+		background: #ccc;
+		border-radius: 50%;
+	}
+	&__content{
+		flex: 1 1 auto;
+		margin: 0;
+	}
+	&__title{
+		font-size: 1.125rem;
+		font-weight: 700;
+	}
+	&__subtitle{
+		margin: 4px 0;
+		font-size: .75rem;
+		font-weight: 400;
+		color: set-color('text', 'sub');
+	}
 }

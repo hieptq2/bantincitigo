@@ -1,0 +1,23 @@
+/* ============================================================================
+   LAYOUT -> guide
+   ========================================================================= */
+
+.l-guide{
+	margin: 0 0 8rem;
+	&__header{
+		padding: 0 0 1rem;
+		margin: 0 0 2rem;
+		border-bottom: 4px solid set-color('divider');
+	}
+	&__title{
+		margin: 0;
+		font-weight: 500;
+		font-size: 4rem;
+		text-transform: uppercase;
+		letter-spacing: 6px;
+		color: $grey400;
+	}
+	&__content{
+		margin: 4rem 0 0;
+	}
+}
